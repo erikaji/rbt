@@ -1,23 +1,22 @@
 ==========================================
 * To clone and setup your git respository:
 ==========================================
-1. vagrant up, vagrant ssh (like in labs)
 
-1a. (Only need to do this once, to make sure commits have your name and not 'vagrant')
+(Only need to do this once, to make sure commits have your name)
 Run the following command, replace your_name and your_email with yours:
 git config --global user.name <your_name>  
 git config --global user.email <your_email>  
 
-2. In introHCI directory, run following command:
-git clone https://github.com/tedtkim/readbymood.git
+1. In introHCI directory, run following command:
+git clone https://github.com/erikaji/rosebt.git
 
-3. cd readbymood
+2. cd rosebt
 
-4. Run each of the following in prompt:
+3. Run each of the following in prompt:
 git config --add branch.master.rebase true
 git config --add branch.autosetuprebase always 
 
-5. Open readbymood/.git/config file and add the following lines to bottom of file:
+4. Open readbymood/.git/config file and add the following lines to bottom of file:
 [alias]  
            st = status  
            co = checkout  
@@ -26,10 +25,27 @@ git config --add branch.autosetuprebase always
 
 Notes: The rebase makes it so that we have a clear and easy way to merge and commit with minimal conflicts.
 
+
+
 ===============================
 * Editing and commit procedure:
 ===============================
+
 1. Edit, git add, and git commit your changes as needed
 2. git pull (if there are conflicts, follow steps on screen to resolve them)
 3. git lg (to check that no funky mergers happened - it should be nice and linear with your changes on top)
 4. git push
+
+
+===============================
+* Directory Organization:
+===============================
+
+- public/css
+- public/images
+- routes (javascript files)
+- views (handlebars/HTML files)
+- app.js (main javascript file)
+
+To Install MySQL
+- In Git Bash, execute the following command: npm install mysql

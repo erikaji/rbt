@@ -1,11 +1,11 @@
 {
-  "name": "readbymood",
+  "name": "rosebt",
   "version": "0.0.1",
-  "author": "Erika, Jack & Ted",
+  "author": "Priya, Yiju, Erika",
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab4"
+    "url": "https://github.com/erikaji/rosebt"
   },
   "license": "MIT",
 
