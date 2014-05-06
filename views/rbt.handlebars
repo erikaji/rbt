@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <title>Read By Mood</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="row">
+        {{#each rbt}}
+          <img src={{photo}} width=400><br />
+          ROSE: {{rose}}<br />
+          BUD: {{bud}}<br />
+          THORN: {{thorn}}<br />
+        {{/each}}
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

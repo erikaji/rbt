@@ -9,9 +9,9 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 var mysql      = require('mysql');
 
-var results = require('./routes/results');
-var article = require ('./routes/article');
-var choosemood = require('./routes/choosemood');
+// var results = require('./routes/results');
+// var article = require ('./routes/article');
+// var choosemood = require('./routes/choosemood');
 
 var app = express();
 var hbs = handlebars.create({
@@ -67,15 +67,20 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', choosemood.view);
-//app.get('/', function(req, res){
-//  connection.query('SELECT * FROM users', function(err, rows){
-    //res.render('users', {users : rows});
-  //});
-//});
-app.get('/results', results.view);
-app.get('/article/:id', article.view);
-app.post('/choosemood', choosemood.post);
+app.get('/', function(req, res){
+  connection.query('SELECT * FROM user', function(err, rows){
+    res.render('user', {user: rows});
+  });
+});
+app.get('/rbt', function(req, res){
+  connection.query('SELECT * FROM rbt', function(err, rows){
+    res.render('rbt', {rbt: rows});
+  });
+});
+// app.get('/', choosemood.view);
+// app.get('/results', results.view);
+// app.get('/article/:id', article.view);
+// app.post('/choosemood', choosemood.post);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
