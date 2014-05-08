@@ -8,7 +8,6 @@ exports.view = function(req, res){
 };
 
 exports.post = function(req, res){
-	console.log('Hello! You typed: '+req.body.rose);
 	var connection = req.app.get('connection');
 	connection.query('UPDATE rbt SET rose="'+req.body.rose+'" WHERE id_rbt=3', function(err, rows) {
 		connection.query('UPDATE rbt SET bud="'+req.body.bud+'" WHERE id_rbt=3', function(err, rows) {
