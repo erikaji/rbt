@@ -11,14 +11,25 @@
 <body>
 
     <div class="container">
+
+      <h1>Navigation</h1>
+      <a href="">RbT</a>
+      <a href="profile">Me</a>
+
+      <h1>Body</h1>
       <div class="row">
         {{#each rbt}}
-          <img src={{photo}} width=400><br />
+          ID: {{id_rbt}}<br />
+          IMG: <img src={{photo_rbt}} width=400><br />
           ROSE: {{rose}}<br />
           BUD: {{bud}}<br />
-          THORN: {{thorn}}<br />
+          THORN: {{thorn}}<br /><br />
+          UID: {{id_user}}<br />
+          UNAME: {{name}}<br />
+          UPHOTO: <img src={{photo_user}} width=400><br />
         {{/each}}
       </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
