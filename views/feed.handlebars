@@ -1,35 +1,52 @@
-<!doctype html>
-<html>
-<head>
-  <title>Read By Mood</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-</head>
-
-<body>
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rose Bud Thorn</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+  </head>
+ 
+  <body>
     <div class="container">
+      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">RBT</a>
+          <a class="navbar-brand" href="/profile">Me</a>
+        </div>
+      </nav>
+      <br /><br /><br />
+      <h1 class="text-center">Rose Bud Thorn</h1>
+      <br />
 
-      <h1>Navigation</h1>
-      <a href="/">RbT</a>
-      <a href="/profile">Me</a>
-
-      <h1>Body</h1>
-      <div class="row">
-        {{#each rbt}}
-          ID: {{id_rbt}}<br />
-          IMG: <img src={{photo_rbt}} width=400><br />
-          ROSE: {{rose}}<br />
-          BUD: {{bud}}<br />
-          THORN: {{thorn}}<br /><br />
-          UID: {{id_user}}<br />
-          UNAME: {{name}}<br />
-          UPHOTO: <img src={{photo_user}} width=400><br />
-        {{/each}}
+      {{#each rbt}}
+      <div class="well">
+        <img src={{photo_user}} width="50" height="50">
+        <h5>{{name}}</h5>
+        <div class="container">
+          <img src={{photo_rbt}} width="100%">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><span class="label label-danger">Rose</span></td>
+                <td>{{rose}}</td>
+              </tr>
+              <tr>
+                <td><span class="label label-success">Bud</span></td>
+                <td>{{bud}}</td>
+              </tr>
+              <tr>
+                <td><span class="label label-warning">Thorn</span></td>
+                <td>{{thorn}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
+      {{/each}}
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>

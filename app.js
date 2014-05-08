@@ -74,8 +74,15 @@ app.get('/', function(req, res){
   });
 });
 app.get('/profile', function(req, res){
-  connection.query('SELECT * FROM (rbt, user) WHERE (rbt.id_user = 1)', function(err, rows_rbt){
+  connection.query('SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user = 1)', function(err, rows_rbt){
     res.render('profile', {
+      rbt: rows_rbt
+    });
+  });
+});
+app.get('/edit', function(req, res){
+  connection.query('SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user = 1)', function(err, rows_rbt){
+    res.render('edit', {
       rbt: rows_rbt
     });
   });

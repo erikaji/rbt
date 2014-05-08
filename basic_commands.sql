@@ -22,5 +22,10 @@ ALTER TABLE user CHANGE COLUMN photo photo_user VARCHAR(200);
 UPDATE user SET photo='https://scontent-b.xx.fbcdn.net/hphotos-prn1/t1.0-9/1625699_10151879794022816_1076038618_n.jpg' WHERE id_user=1;
 UPDATE rbt SET photo='http://farm4.static.flickr.com/3576/3409781494_5a47a398f9.jpg' WHERE id_rbt=1;
 
+UPDATE rbt SET photo='' WHERE id_user=1;
+UPDATE rbt SET rose='' WHERE id_user=1;
+UPDATE rbt SET bud='' WHERE id_user=1;
+UPDATE rbt SET thorn='' WHERE id_user=1;
+
 # DELETING ROWS
 DELETE FROM rbt WHERE id_rbt=2;
