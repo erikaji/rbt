@@ -29,3 +29,5 @@ UPDATE rbt SET thorn='' WHERE id_user=1;
 
 # DELETING ROWS
 DELETE FROM rbt WHERE id_rbt=2;
+
+UPDATE rbt SET rose='newrose' WHERE id_rbt=3;

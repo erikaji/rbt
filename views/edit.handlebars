@@ -8,12 +8,6 @@
     <meta name="author" content="">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-    <script language="javascript">
-      function testResults(form) {
-        var TestVar = form.inputbox.value;
-        alert("You typed: " + TestVar);
-      }
-    </script>
   </head>
  
   <body>
@@ -35,8 +29,8 @@
       </center>
       {{/each}}
 
-      <form method="POST" action="/submit_form/">
-
+      <!--<form method="POST" action="/submit_form/">-->
+      <form name="input" action="profile" method="post">
         <table class="table" style="margin-top:30px;">
           <tbody>
             <tr style="height: 150px">

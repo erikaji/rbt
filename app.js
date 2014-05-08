@@ -7,11 +7,20 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
-var mysql      = require('mysql');
 var crypto = require('crypto');
 
-// var feed = require('./routes/feed');
-// var profile = require('./routes/profile');
+//mysql reference - https://github.com/felixge/node-mysql
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+    host: "us-cdbr-east-05.cleardb.net",
+    user: "ba3bd950dbfbed", 
+    password: "573b449f"
+});
+connection.query('USE heroku_f6c3e56bf244b8e');
+
+var edit = require('./routes/edit');
+var feed = require('./routes/feed');
+var profile = require('./routes/profile');
 
 var app = express();
 var hbs = handlebars.create({
@@ -37,12 +46,12 @@ var hbs = handlebars.create({
     }
 });
 
-
 /*
  * Respond to GET requests to /sign_s3.
  * Upon request, return JSON containing the temporarily-signed S3 request and the
  * anticipated URL of the image.
  */
+ /*
 app.get('/sign_s3', function(req, res){
     var object_name = req.query.s3_object_name;
     var mime_type = req.query.s3_object_type;
@@ -66,30 +75,26 @@ app.get('/sign_s3', function(req, res){
     res.write(JSON.stringify(credentials));
     res.end();
 });
+*/
 
 /*
  * Respond to POST requests to /submit_form.
  * This function needs to be completed to handle the information in 
  * a way that suits your application.
  */
+ /*
 app.post('/submit_form', function(req, res){
     //rose = req.body.rose;
     //update_account(username, full_name, avatar_url); // TODO: create this function
     // TODO: Return something useful or redirect
 });
+*/
 
-//mysql reference - https://github.com/felixge/node-mysql
-var connection = mysql.createConnection({
-    host: "us-cdbr-east-05.cleardb.net",
-    user: "ba3bd950dbfbed", 
-    password: "573b449f"
-});
-
-connection.query('USE heroku_f6c3e56bf244b8e');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
+app.set('connection', connection);
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
@@ -108,28 +113,10 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', function(req, res){
-  connection.query('SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user)', function(err, rows_rbt){
-    res.render('feed', {
-      rbt: rows_rbt
-    });
-  });
-});
-app.get('/profile', function(req, res){
-  connection.query('SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user = 1)', function(err, rows_rbt){
-    res.render('profile', {
-      rbt: rows_rbt
-    });
-  });
-});
-app.get('/edit', function(req, res){
-  connection.query('SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user = 1)', function(err, rows_rbt){
-    res.render('edit', {
-      rbt: rows_rbt
-    });
-  });
-});
-// app.post('/profile', profile.post);
+app.get('/', feed.view);
+app.get('/profile', profile.view);
+app.get('/edit', edit.view);
+app.post('/profile', profile.post);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
