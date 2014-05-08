@@ -73,7 +73,7 @@ app.get('/sign_s3', function(req, res){
  * a way that suits your application.
  */
 app.post('/submit_form', function(req, res){
-    rose = req.body.rose;
+    //rose = req.body.rose;
     //update_account(username, full_name, avatar_url); // TODO: create this function
     // TODO: Return something useful or redirect
 });
