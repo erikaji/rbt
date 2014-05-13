@@ -3,7 +3,6 @@
  * Module dependencies.
  */
 
- //TEMP
 
 var express = require('express');
 var http = require('http');
@@ -16,9 +15,9 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
     host: "us-cdbr-east-05.cleardb.net",
     user: "ba3bd950dbfbed", 
-    password: "573b449f"
+    password: "573b449f",
+    database: "heroku_f6c3e56bf244b8e"
 });
-connection.query('USE heroku_f6c3e56bf244b8e');
 
 var edit = require('./routes/edit');
 var feed = require('./routes/feed');
