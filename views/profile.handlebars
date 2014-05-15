@@ -28,7 +28,8 @@
         <center>
           <img src={{photo_user}} style="width: 150px; height: 150px;">
           <h3>{{name}}</h3>
-          <div class="hidden" id="hash">{{photo_rbt}}</div>
+          <div class="hidden" name="user">{{name}}</div>
+          <div class="hidden" id={{name}}_hash>{{photo_rbt}}</div>
 
         </center>
         <center><a href="/edit" class="btn btn-default">Update Status</a></center>
@@ -36,8 +37,8 @@
         <table border="0" class="table" style="margin-top:30px;">
           <tbody>
             <tr style="height: 150px">
-              <td id="spin" style="width: 150px">
-                  <img class="pano" id="pano" style="width: 150px" />
+              <td id={{name}}_spin style="width: 150px">
+                  <img class="pano" id={{name}}_pano style="width: 150px" />
               </td>
               <td>
                 <span class="label label-danger">Rose</span>

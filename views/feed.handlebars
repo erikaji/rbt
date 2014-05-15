@@ -27,7 +27,12 @@
         <img src={{photo_user}} width="50" height="50">
         <h5>{{name}}</h5>
         <div class="container">
-          <img src={{photo_rbt}} width="100%">
+        <div class="hidden" name="user">{{name}}</div>
+        <div class="hidden" id={{name}}_hash>{{photo_rbt}}</div>
+
+          <div id={{name}}_spin style="width: 150px">
+                  <img class="pano" id={{name}}_pano style="width: 150px" />
+          </div>
           <table class="table">
             <tbody>
               <tr>
@@ -49,6 +54,14 @@
       {{/each}}
     </div>
 
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//cdn.firebase.com/v0/firebase.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+    <script type="text/javascript" src="/js/sha256.js"></script>
+    <script type="text/javascript" src="/js/fbRetrive.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 </body>
