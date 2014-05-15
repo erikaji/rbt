@@ -1,0 +1,101 @@
+2014-05-13T02:18:48.114862+00:00 heroku[router]: at=info method=GET path=/ host=rosebt.herokuapp.com request_id=d5fd71b3-530e-49a4-9066-c795f0ed66d2 fwd="171.66.216.130" dyno=web.1 connect=3ms service=81ms status=200 bytes=4135
+2014-05-13T02:18:48.278535+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=7c49cde5-6073-49b8-851a-ae9b9e4e3a8c fwd="171.66.216.130" dyno=web.1 connect=1ms service=19ms status=200 bytes=99839
+2014-05-13T02:18:48.357171+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=9de797e2-29d3-4041-8c14-e94a2b45a206 fwd="171.66.216.130" dyno=web.1 connect=4ms service=7ms status=200 bytes=13426
+2014-05-13T02:18:48.118434+00:00 app[web.1]: [90mGET / [32m200 [90m75ms - 3.75kb[0m
+2014-05-13T02:18:48.356758+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [32m200 [90m3ms - 12.83kb[0m
+2014-05-13T02:18:48.436045+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=864a0e56-497e-42d5-89cb-3ddec3141bab fwd="171.66.216.130" dyno=web.1 connect=7ms service=8ms status=200 bytes=28112
+2014-05-13T02:18:48.268212+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [32m200 [90m14ms - 97.21kb[0m
+2014-05-13T02:18:48.435104+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [32m200 [90m3ms - 27.17kb[0m
+2014-05-13T02:20:18.169998+00:00 app[web.1]: 
+2014-05-13T02:20:18.173171+00:00 app[web.1]: Error: Connection lost: The server closed the connection.
+2014-05-13T02:20:18.173183+00:00 app[web.1]:     at process._tickCallback (node.js:419:13)
+2014-05-13T02:20:18.173174+00:00 app[web.1]:     at Protocol.end (/app/node_modules/mysql/lib/protocol/Protocol.js:78:13)
+2014-05-13T02:20:18.173178+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mysql/lib/Connection.js:79:28)
+2014-05-13T02:20:18.173179+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:117:20)
+2014-05-13T02:20:18.173181+00:00 app[web.1]:     at _stream_readable.js:919:16
+2014-05-13T02:20:19.344513+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-13T02:20:19.345164+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-13T02:20:22.885402+00:00 app[web.1]: Express server listening on port 3269
+2014-05-13T02:20:21.407828+00:00 heroku[web.1]: Starting process with command `node app.js`
+2014-05-13T02:20:23.346269+00:00 heroku[web.1]: State changed from starting to up
+2014-05-13T02:20:19.337701+00:00 heroku[web.1]: Process exited with status 8
+2014-05-13T03:25:13.068922+00:00 heroku[web.1]: Idling
+2014-05-13T03:25:13.069495+00:00 heroku[web.1]: State changed from up to down
+2014-05-13T03:25:16.293426+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2014-05-13T03:25:18.570317+00:00 heroku[web.1]: Process exited with status 143
+2014-05-13T03:38:16.427277+00:00 heroku[web.1]: State changed from down to starting
+2014-05-13T03:38:16.427277+00:00 heroku[web.1]: Unidling
+2014-05-13T03:38:20.905529+00:00 app[web.1]: Express server listening on port 12535
+2014-05-13T03:38:21.395611+00:00 heroku[web.1]: State changed from starting to up
+2014-05-13T03:38:22.586500+00:00 heroku[router]: at=info method=GET path=/profile host=rosebt.herokuapp.com request_id=6c47d943-36c1-45c1-84c7-bb6c1b0454bf fwd="171.66.216.4" dyno=web.1 connect=2ms service=95ms status=304 bytes=248
+2014-05-13T03:38:19.034119+00:00 heroku[web.1]: Starting process with command `node app.js`
+2014-05-13T03:38:22.584200+00:00 app[web.1]: [90mGET /profile [36m304 [90m81ms[0m
+2014-05-13T03:39:52.690100+00:00 app[web.1]: 
+2014-05-13T03:39:52.693067+00:00 app[web.1]: Error: Connection lost: The server closed the connection.
+2014-05-13T03:39:52.693072+00:00 app[web.1]:     at Protocol.end (/app/node_modules/mysql/lib/protocol/Protocol.js:78:13)
+2014-05-13T03:39:52.693077+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:117:20)
+2014-05-13T03:39:52.693081+00:00 app[web.1]:     at process._tickCallback (node.js:419:13)
+2014-05-13T03:39:52.693075+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mysql/lib/Connection.js:79:28)
+2014-05-13T03:39:52.693079+00:00 app[web.1]:     at _stream_readable.js:919:16
+2014-05-13T03:39:54.195278+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-13T03:39:54.196748+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-13T03:39:57.900800+00:00 app[web.1]: Express server listening on port 20592
+2014-05-13T03:39:54.179015+00:00 heroku[web.1]: Process exited with status 8
+2014-05-13T03:39:58.076829+00:00 heroku[web.1]: State changed from starting to up
+2014-05-13T03:39:56.768031+00:00 heroku[web.1]: Starting process with command `node app.js`
+2014-05-13T04:43:20.265331+00:00 heroku[web.1]: Idling
+2014-05-13T04:43:20.265879+00:00 heroku[web.1]: State changed from up to down
+2014-05-13T04:43:28.931587+00:00 heroku[web.1]: Process exited with status 143
+2014-05-13T04:43:26.171142+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2014-05-14T22:24:37.958833+00:00 heroku[web.1]: Unidling
+2014-05-14T22:24:37.959305+00:00 heroku[web.1]: State changed from down to starting
+2014-05-14T22:24:43.534105+00:00 app[web.1]: Express server listening on port 37359
+2014-05-14T22:24:43.885626+00:00 heroku[web.1]: State changed from starting to up
+2014-05-14T22:24:45.820585+00:00 heroku[router]: at=info method=GET path=/ host=rosebt.herokuapp.com request_id=d666fb69-20e4-4053-bf4d-e15fa2421145 fwd="128.12.253.151" dyno=web.1 connect=3ms service=678ms status=200 bytes=4131
+2014-05-14T22:24:45.802177+00:00 app[web.1]: [90mGET / [32m200 [90m657ms - 3.75kb[0m
+2014-05-14T22:24:46.070262+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=b427288a-2d0e-4809-9150-d644b5cd5b76 fwd="128.12.253.151" dyno=web.1 connect=1ms service=13ms status=304 bytes=239
+2014-05-14T22:24:46.071673+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=5abca0b3-f1ea-4a96-bcca-4a038f56c3fc fwd="128.12.253.151" dyno=web.1 connect=1ms service=6ms status=304 bytes=239
+2014-05-14T22:24:46.155311+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=6e0077a0-c349-484f-bbe5-ef51f1647b5b fwd="128.12.253.151" dyno=web.1 connect=1ms service=6ms status=304 bytes=239
+2014-05-14T22:24:46.071199+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m3ms[0m
+2014-05-14T22:24:46.068440+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m7ms[0m
+2014-05-14T22:24:46.148794+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m1ms[0m
+2014-05-14T22:24:42.443647+00:00 heroku[web.1]: Starting process with command `node app.js`
+2014-05-14T22:26:15.818220+00:00 app[web.1]: 
+2014-05-14T22:26:15.821599+00:00 app[web.1]: Error: Connection lost: The server closed the connection.
+2014-05-14T22:26:15.821608+00:00 app[web.1]:     at _stream_readable.js:919:16
+2014-05-14T22:26:15.821602+00:00 app[web.1]:     at Protocol.end (/app/node_modules/mysql/lib/protocol/Protocol.js:78:13)
+2014-05-14T22:26:15.821604+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mysql/lib/Connection.js:79:28)
+2014-05-14T22:26:15.821606+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:117:20)
+2014-05-14T22:26:15.821609+00:00 app[web.1]:     at process._tickCallback (node.js:419:13)
+2014-05-14T22:26:17.090756+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-14T22:26:17.091610+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-14T22:26:17.078392+00:00 heroku[web.1]: Process exited with status 8
+2014-05-14T22:26:20.941492+00:00 app[web.1]: Express server listening on port 15494
+2014-05-14T22:26:21.294885+00:00 heroku[web.1]: State changed from starting to up
+2014-05-14T22:26:23.163523+00:00 heroku[router]: at=info method=GET path=/profile host=rosebt.herokuapp.com request_id=23f4af05-626e-462f-ba1b-355c946180cf fwd="128.12.253.151" dyno=web.1 connect=2ms service=874ms status=200 bytes=2440
+2014-05-14T22:26:23.157525+00:00 app[web.1]: [90mGET /profile [32m200 [90m868ms - 2.09kb[0m
+2014-05-14T22:26:23.435982+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=85a1cd7a-2461-4a8e-863d-ffcd55414ad6 fwd="128.12.253.151" dyno=web.1 connect=9ms service=24ms status=304 bytes=239
+2014-05-14T22:26:23.483381+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=db7de63b-6336-4a5c-bd1c-ad66ada4ed01 fwd="128.12.253.151" dyno=web.1 connect=2ms service=8ms status=304 bytes=239
+2014-05-14T22:26:23.424592+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m10ms[0m
+2014-05-14T22:26:23.704620+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m2ms[0m
+2014-05-14T22:26:23.720091+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=0d6160e4-0c42-43ea-9f51-337ba8268e5c fwd="128.12.253.151" dyno=web.1 connect=52ms service=22ms status=304 bytes=239
+2014-05-14T22:26:23.478863+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m6ms[0m
+2014-05-14T22:26:19.418282+00:00 heroku[web.1]: Starting process with command `node app.js`
+2014-05-14T22:26:27.669716+00:00 heroku[router]: at=info method=GET path=/ host=rosebt.herokuapp.com request_id=63ca4d58-9648-48d0-b3ae-b07f5a5c4ee8 fwd="128.12.253.151" dyno=web.1 connect=2ms service=24ms status=304 bytes=128
+2014-05-14T22:26:27.813174+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=378e9f3d-a226-457c-9e64-c7d2ad9f2b53 fwd="128.12.253.151" dyno=web.1 connect=1ms service=5ms status=304 bytes=239
+2014-05-14T22:26:27.653505+00:00 app[web.1]: [90mGET / [36m304 [90m13ms[0m
+2014-05-14T22:26:27.814917+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m1ms[0m
+2014-05-14T22:26:27.898156+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=0722f34b-43d5-4517-a435-1d9c8a99b5d5 fwd="128.12.253.151" dyno=web.1 connect=10ms service=11ms status=304 bytes=239
+2014-05-14T22:26:27.807792+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m1ms[0m
+2014-05-14T22:26:27.879641+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m2ms[0m
+2014-05-14T22:26:27.821236+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=f286766d-4fb8-46fe-8bf5-0ed78c9496dc fwd="128.12.253.151" dyno=web.1 connect=2ms service=6ms status=304 bytes=239
+2014-05-14T22:27:57.741076+00:00 app[web.1]: Error: Connection lost: The server closed the connection.
+2014-05-14T22:27:57.735989+00:00 app[web.1]: 
+2014-05-14T22:27:57.741084+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mysql/lib/Connection.js:79:28)
+2014-05-14T22:27:57.741082+00:00 app[web.1]:     at Protocol.end (/app/node_modules/mysql/lib/protocol/Protocol.js:78:13)
+2014-05-14T22:27:57.741085+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:117:20)
+2014-05-14T22:27:57.741089+00:00 app[web.1]:     at process._tickCallback (node.js:419:13)
+2014-05-14T22:27:57.741087+00:00 app[web.1]:     at _stream_readable.js:919:16
+2014-05-14T22:27:59.026008+00:00 heroku[web.1]: Process exited with status 8
+2014-05-14T22:27:59.045299+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-14T22:34:48.794377+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/profile host=rosebt.herokuapp.com request_id=4eb42da5-c9a7-47a2-afa8-eac40beff11f fwd="128.12.253.151" dyno= connect= service= status=503 bytes=

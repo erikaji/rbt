@@ -1,0 +1,105 @@
+2014-05-14T23:00:39.285911+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=90284813-6d68-4d90-a843-d9fd0aa15c95 fwd="128.12.253.151" dyno=web.1 connect=2ms service=7ms status=304 bytes=239
+2014-05-14T23:00:39.287888+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=24e4fc2b-ab5b-452b-b5f7-70dca21f3069 fwd="128.12.253.151" dyno=web.1 connect=2ms service=8ms status=304 bytes=239
+2014-05-14T23:00:39.126316+00:00 app[web.1]: [90mGET / [36m304 [90m11ms[0m
+2014-05-14T23:00:39.294475+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m2ms[0m
+2014-05-14T23:00:39.294911+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m1ms[0m
+2014-05-14T23:00:39.294118+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m4ms[0m
+2014-05-14T23:00:57.515282+00:00 heroku[router]: at=info method=GET path=/ host=rosebt.herokuapp.com request_id=859a19a7-5734-4c54-b86a-ed3f9c290f82 fwd="128.12.253.151" dyno=web.1 connect=2ms service=14ms status=304 bytes=128
+2014-05-14T23:00:57.704393+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=37a4c383-352d-4caf-90a3-fdd0a6513172 fwd="128.12.253.151" dyno=web.1 connect=2ms service=6ms status=304 bytes=239
+2014-05-14T23:00:57.699488+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=3b00efc2-508a-401c-a408-060e7298185f fwd="128.12.253.151" dyno=web.1 connect=3ms service=6ms status=304 bytes=239
+2014-05-14T23:00:57.705417+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=fd4d88db-e830-4e16-9153-8b9b631c9303 fwd="128.12.253.151" dyno=web.1 connect=4ms service=9ms status=304 bytes=239
+2014-05-14T23:00:57.522416+00:00 app[web.1]: [90mGET / [36m304 [90m10ms[0m
+2014-05-14T23:00:57.705385+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m2ms[0m
+2014-05-14T23:00:57.703600+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m2ms[0m
+2014-05-14T23:00:57.707896+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m1ms[0m
+2014-05-14T23:00:59.153833+00:00 heroku[router]: at=info method=GET path=/profile host=rosebt.herokuapp.com request_id=7f70a877-3f11-4ff6-9d22-3d6c162b60d7 fwd="128.12.253.151" dyno=web.1 connect=3ms service=15ms status=304 bytes=128
+2014-05-14T23:00:59.339431+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=bf99353e-a7e6-4fdb-bf75-1647a97bf8a2 fwd="128.12.253.151" dyno=web.1 connect=2ms service=5ms status=304 bytes=239
+2014-05-14T23:00:59.347032+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=9edf2b7d-8249-4674-aa34-52f32119e8c9 fwd="128.12.253.151" dyno=web.1 connect=3ms service=9ms status=304 bytes=239
+2014-05-14T23:00:59.359840+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=d5d23abc-beb1-4536-9adf-947a1a326f19 fwd="128.12.253.151" dyno=web.1 connect=2ms service=5ms status=304 bytes=239
+2014-05-14T23:00:59.156066+00:00 app[web.1]: [90mGET /profile [36m304 [90m11ms[0m
+2014-05-14T23:00:59.350902+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m3ms[0m
+2014-05-14T23:00:59.347198+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m2ms[0m
+2014-05-14T23:00:59.353933+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m0ms[0m
+2014-05-14T23:01:56.087626+00:00 heroku[router]: at=info method=GET path=/ host=rosebt.herokuapp.com request_id=d1ac7ca8-3c36-4875-8bc4-b88f6770ad07 fwd="128.12.253.151" dyno=web.1 connect=2ms service=15ms status=304 bytes=128
+2014-05-14T23:01:56.293485+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=fbd0df84-20bb-467c-b510-d4b0f4a01787 fwd="128.12.253.151" dyno=web.1 connect=3ms service=6ms status=304 bytes=239
+2014-05-14T23:01:56.297078+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=ffedc760-3fb4-4a63-9cff-fd4a9c35dbfb fwd="128.12.253.151" dyno=web.1 connect=4ms service=9ms status=304 bytes=239
+2014-05-14T23:01:56.093296+00:00 app[web.1]: [90mGET / [36m304 [90m11ms[0m
+2014-05-14T23:01:56.296437+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m1ms[0m
+2014-05-14T23:01:56.392449+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=9cc665cd-fb46-46c8-93f4-de5b9ab17a88 fwd="128.12.253.151" dyno=web.1 connect=8ms service=10ms status=304 bytes=239
+2014-05-14T23:01:56.294401+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m
+1ms[0m
+2014-05-14T23:01:56.388070+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m2ms[0m
+2014-05-14T23:03:26.174717+00:00 app[web.1]: 
+2014-05-14T23:03:26.177991+00:00 app[web.1]: Error: Connection lost: The server closed the connection.
+2014-05-14T23:03:26.177999+00:00 app[web.1]:     at _stream_readable.js:919:16
+2014-05-14T23:03:26.178001+00:00 app[web.1]:     at process._tickCallback (node.js:419:13)
+2014-05-14T23:03:26.177995+00:00 app[web.1]:     at Protocol.end (/app/node_modules/mysql/lib/protocol/Protocol.js:78:13)
+2014-05-14T23:03:26.177996+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mysql/lib/Connection.js:79:28)
+2014-05-14T23:03:26.177998+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:117:20)
+2014-05-14T23:03:27.392245+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-14T23:03:27.393047+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-14T23:03:27.380390+00:00 heroku[web.1]: Process exited with status 8
+2014-05-14T23:03:31.541802+00:00 heroku[web.1]: State changed from starting to up
+2014-05-14T23:03:31.267375+00:00 app[web.1]: Express server listening on port 12749
+2014-05-14T23:03:29.466644+00:00 heroku[web.1]: Starting process with command `node app.js`
+2014-05-14T23:06:23.702020+00:00 heroku[router]: at=info method=GET path=/ host=rosebt.herokuapp.com request_id=c95ff7c5-f302-4c6b-a24e-cda57da59417 fwd="128.12.253.151" dyno=web.1 connect=3ms service=98ms status=304 bytes=246
+2014-05-14T23:06:23.905646+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=7e640821-5235-4b06-a6fb-827b10e1d5c7 fwd="128.12.253.151" dyno=web.1 connect=4ms service=14ms status=304 bytes=239
+2014-05-14T23:06:23.903660+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=ee944227-f9b5-4568-a976-9cfcaa0017ae fwd="128.12.253.151" dyno=web.1 connect=6ms service=15ms status=304 bytes=239
+2014-05-14T23:06:23.693770+00:00 app[web.1]: [90mGET / [36m304 [90m89ms[0m
+2014-05-14T23:06:23.895285+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m2ms[0m
+2014-05-14T23:06:23.954554+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=f2cb7281-ced1-40ba-958b-98e866033716 fwd="128.12.253.151" dyno=web.1 connect=13ms service=30ms status=304 bytes=239
+2014-05-14T23:06:23.892956+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m7ms[0m
+2014-05-14T23:06:23.926481+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m2ms[0m
+2014-05-14T23:06:25.738307+00:00 heroku[router]: at=info method=GET path=/profile host=roseb
+t.herokuapp.com request_id=1ca73313-78e2-4203-91cb-b3598366d157 fwd="128.12.253.151" dyno=web.1 connect=2ms service=25ms status=304 bytes=128
+2014-05-14T23:06:25.729672+00:00 app[web.1]: [90mGET /profile [36m304 [90m20ms[0m
+2014-05-14T23:06:26.002604+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=c8dd0863-9196-41c0-bc23-1fab09572198 fwd="128.12.253.151" dyno=web.1 connect=14ms service=28ms status=304 bytes=239
+2014-05-14T23:06:26.009123+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=824f7eae-c9f3-487d-9c89-ab33aef9f59e fwd="128.12.253.151" dyno=web.1 connect=11ms service=22ms status=304 bytes=239
+2014-05-14T23:06:25.986527+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m1ms[0m
+2014-05-14T23:06:26.006674+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m2ms[0m
+2014-05-14T23:06:25.986166+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m7ms[0m
+2014-05-14T23:06:27.209607+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=dc4c05cc-14d6-42b2-8894-d0e4ebc4ccff fwd="128.12.253.151" dyno=web.1 connect=7ms service=10ms status=304 bytes=239
+2014-05-14T23:06:27.029907+00:00 app[web.1]: [90mGET / [36m304 [90m11ms[0m
+2014-05-14T23:06:27.200293+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m2ms[0m
+2014-05-14T23:06:27.201226+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=ea29203b-ccaa-4774-bfbb-a505ee32c6e5 fwd="128.12.253.151" dyno=web.1 connect=1ms service=5ms status=304 bytes=239
+2014-05-14T23:06:27.208272+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=656e52bf-c451-4c1a-998c-c5afa39a8c55 fwd="128.12.253.151" dyno=web.1 connect=2ms service=7ms status=304 bytes=239
+2014-05-14T23:06:27.194701+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m2ms[0m
+2014-05-14T23:06:27.202248+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m2ms[0m
+2014-05-14T23:06:26.013353+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=8b5d9c9b-44e0-42e9-ab63-f6ec05fd3ca3 fwd="128.12.253.151" dyno=web.1 connect=10ms service=24ms status=304 bytes=239
+2014-05-14T23:06:27.047115+00:00 heroku[router]: at=info method=GET path=/ host=rosebt.herokuapp.com request_id=74a726d9-186e-459c-b2dd-e7ed15401441 fwd="128.12.253.151" dyno=web.1 connect=32ms service=28ms status=304 bytes=128
+2014-05-14T23:07:24.906019+00:00 heroku[router]: at=info method=GET path=/profile host=rosebt.herokuapp.com request_id=eff65a3d-93f2-4a82-b3b4-7d34a8485ab7 fwd="128.12.253.151" dyno=web.1 connect=9ms service=19ms status=304 bytes=128
+2014-05-14T23:07:25.069286+0
+0:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=5ab04fb9-240a-4e44-b61c-acf4f035ace6 fwd="128.12.253.151" dyno=web.1 connect=2ms service=6ms status=304 bytes=239
+2014-05-14T23:07:25.099505+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=5093e815-120a-4b98-b1bd-94bf85828602 fwd="128.12.253.151" dyno=web.1 connect=7ms service=11ms status=304 bytes=239
+2014-05-14T23:07:25.126078+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=14bb5a62-f474-45a9-8bfb-5a343a150935 fwd="128.12.253.151" dyno=web.1 connect=3ms service=8ms status=304 bytes=239
+2014-05-14T23:07:25.094981+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m4ms[0m
+2014-05-14T23:07:24.906251+00:00 app[web.1]: [90mGET /profile [36m304 [90m17ms[0m
+2014-05-14T23:07:25.068885+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m1ms[0m
+2014-05-14T23:07:25.121840+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m1ms[0m
+2014-05-14T23:07:25.966800+00:00 heroku[router]: at=info method=GET path=/ host=rosebt.herokuapp.com request_id=c188a0c8-f95a-4942-a1e5-ebd38162002a fwd="128.12.253.151" dyno=web.1 connect=2ms service=22ms status=304 bytes=128
+2014-05-14T23:07:26.116581+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=1b96c5fc-755a-4d98-8aa7-9a222f899eb9 fwd="128.12.253.151" dyno=web.1 connect=3ms service=7ms status=304 bytes=239
+2014-05-14T23:07:26.117657+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.com request_id=0fe5f4b4-fa51-4663-80ff-ba1b57d4f0e9 fwd="128.12.253.151" dyno=web.1 connect=2ms service=8ms status=304 bytes=239
+2014-05-14T23:07:25.951127+00:00 app[web.1]: [90mGET / [36m304 [90m14ms[0m
+2014-05-14T23:07:26.112067+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m2ms[0m
+2014-05-14T23:07:26.172515+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=c4ef1283-641c-421b-a145-77e82bbf1b86 fwd="128.12.253.151" dyno=web.1 connect=12ms service=10ms status=304 bytes=239
+2014-05-14T23:07:26.159717+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m2ms[0m
+2014-05-14T23:07:26.109203+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m3ms[0m
+2014-05-14T23:07:34.668993+00:00 heroku[router]: at=info method=GET path=/profile host=rosebt.herokuapp.com request_id=d5ef5ae2-f4c8-4e6a-8b94-9cb97263d54a fwd="128.12.253.151" dyno=web.1 connect=2ms service=13ms status=304 bytes=128
+2014-05-14T23:07:34.666536+00:00 app[web.1]: [90mGET /profile [36m304 [90m9ms[0m
+2014-05-14T23:07:34.929493+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=rosebt.herokuapp.co
+m request_id=dd7683ea-fd03-451c-a505-6cdae0a3387e fwd="128.12.253.151" dyno=web.1 connect=2ms service=18ms status=304 bytes=239
+2014-05-14T23:07:35.042488+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=rosebt.herokuapp.com request_id=fab86a1d-a4ea-49e6-b204-84860695b569 fwd="128.12.253.151" dyno=web.1 connect=19ms service=13ms status=304 bytes=239
+2014-05-14T23:07:34.942000+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-theme.min.css host=rosebt.herokuapp.com request_id=3cc6d0d6-83b4-49ad-96c7-243fcdd94628 fwd="128.12.253.151" dyno=web.1 connect=6ms service=18ms status=304 bytes=239
+2014-05-14T23:07:35.032347+00:00 app[web.1]: [90mGET /css/bootstrap.min.css [36m304 [90m1ms[0m
+2014-05-14T23:07:34.924733+00:00 app[web.1]: [90mGET /js/bootstrap.min.js [36m304 [90m12ms[0m
+2014-05-14T23:07:34.930453+00:00 app[web.1]: [90mGET /css/bootstrap-theme.min.css [36m304 [90m9ms[0m
+2014-05-14T23:09:04.752515+00:00 app[web.1]: 
+2014-05-14T23:09:04.758581+00:00 app[web.1]: Error: Connection lost: The server closed the connection.
+2014-05-14T23:09:04.758585+00:00 app[web.1]:     at Protocol.end (/app/node_modules/mysql/lib/protocol/Protocol.js:78:13)
+2014-05-14T23:09:04.758587+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mysql/lib/Connection.js:79:28)
+2014-05-14T23:09:04.758591+00:00 app[web.1]:     at process._tickCallback (node.js:419:13)
+2014-05-14T23:09:04.758588+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:117:20)
+2014-05-14T23:09:04.758590+00:00 app[web.1]:     at _stream_readable.js:919:16
+2014-05-14T23:09:06.207623+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-14T23:09:06.194367+00:00 heroku[web.1]: Process exited with status 8
+2014-05-14T23:09:35.891024+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/profile host=rosebt.herokuapp.com request_id=33c38536-73ac-48ff-8da5-c9481e216c4c fwd="128.12.253.151" dyno= connect= service= status=503 bytes=
