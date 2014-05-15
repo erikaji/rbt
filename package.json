@@ -1,7 +1,7 @@
 {
   "name": "rosebt",
   "version": "0.0.0",
-  "description": "========================================== * To clone and setup your git respository: ==========================================",
+  "description": "Rose Bud Thorn",
   "main": "app.js",
   "dependencies": {
     "express3-handlebars": "~0.5.0",
