@@ -9,6 +9,7 @@ exports.view = function(req, res){
 
 exports.post = function(req, res){
 	var connection = req.app.get('connection');
+	//console.log(window.location.hash);
 	connection.query('UPDATE rbt SET rose="'+req.body.rose+'" WHERE id_rbt=3', function(err, rows) {
 		connection.query('UPDATE rbt SET bud="'+req.body.bud+'" WHERE id_rbt=3', function(err, rows) {
 			connection.query('UPDATE rbt SET thorn="'+req.body.thorn+'" WHERE id_rbt=3', function(err, rows) {
@@ -24,3 +25,5 @@ exports.post = function(req, res){
 		});
 	  });
   	}
+
+

@@ -36,7 +36,7 @@
             <tr style="height: 150px">
               <td>
                 <span class="label label-default pull-left">Photo</span>
-                <textarea name="photo" maxlength="199" class="form-control" style="margin: 0px; height: 140px; width: 129px;"></textarea>
+                <textarea id="photo" name="photo" maxlength="199" class="form-control" style="margin: 0px; height: 140px; width: 129px;"></textarea>
               </td>
               <td>
                 <span class="label label-danger pull-left">Rose</span>
@@ -63,37 +63,23 @@
 
     </div>
 
+
+    <div id="spin"></div>
+    <h1>Upload</h1>
+    <input type="file" accept="image/*" capture="camera" id="file-upload">
+    <br/>
+    <img class="pano" id="pano" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//cdn.firebase.com/v0/firebase.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+    <script type="text/javascript" src="/js/sha256.js"></script>
+    <script type="text/javascript" src="/js/firepano.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <!--
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-      <script type="text/javascript" src="/js/lodash.min.js"></script>
-      <script type="text/javascript" src="/js/s3upload.js"></script>
 
-      <script type="text/javascript">
-        function s3_upload(){
-        var s3upload = new S3Upload({
-        file_dom_selector: '#files',
-        s3_sign_put_url: '/sign_s3',
-        onProgress: function(percent, message) {
-            $('#status').html('Upload progress: ' + percent + '% ' + message);
-        },
-        onFinishS3Put: function(public_url) {
-            $('#status').html('Upload completed. Uploaded to: '+ public_url);
-            $("#rose").val(public_url);
-            $("#preview").html('<img src="'+public_url+'" style="width:300px;" />');
-        },
-        onError: function(status) {
-            $('#status').html('Upload error: ' + status);
-        }
-    });
-}
-
-$(document).ready(function() {
-    $('#files').on("change", s3_upload);
-});
-</script>-->
-
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
 </body>
 </html>
