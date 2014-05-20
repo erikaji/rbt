@@ -22,6 +22,7 @@ var pool = mysql.createPool({
 var edit = require('./routes/edit');
 var feed = require('./routes/feed');
 var profile = require('./routes/profile');
+var login = require('./routes/login');
 
 var app = express();
 var hbs = handlebars.create({
@@ -72,6 +73,7 @@ if ('development' == app.get('env')) {
 app.get('/', feed.view);
 app.get('/profile', profile.view);
 app.get('/edit', edit.view);
+app.get('/login', login.view);
 app.post('/profile', profile.post);
 
 http.createServer(app).listen(app.get('port'), function(){
