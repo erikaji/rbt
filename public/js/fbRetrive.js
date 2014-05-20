@@ -9,7 +9,7 @@
       var payload = snap.val();
 
       if (payload != null) {
-        console.log(rbts[i].innerHTML);
+        //console.log(rbts[i].innerHTML);
 
         document.getElementById(rbts[i].innerHTML+"_pano").src = payload;
       } else {
@@ -21,11 +21,11 @@
 
     var funcs = [];
   for (var i = 0; i < rbts.length; i++) {  
-    console.log(i);
+    //console.log(i);
     var rbt = rbts[i].innerHTML;
     var hash = document.getElementById(rbt+"_hash").innerHTML;
-    console.log(rbt);
-    console.log(hash);  
+    //console.log(rbt);
+   //console.log(hash);  
     if (hash === '') {
       // No hash found, so render the file upload button.
     } else {
