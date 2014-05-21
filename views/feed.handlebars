@@ -26,7 +26,7 @@
       <div class="well well-sm">
         <!--USER AND TIMESTAMP BEGIN-->
         <a href="/friend/{{id_user}}"}>
-          <img class="feed-photo" src={{photo_user}}>
+          <img class="feed-userphoto" src={{photo_user}}>
           <span class="feed-username">{{name}}</span>
         </a>
         <div class="feed-datetime">
@@ -38,32 +38,34 @@
 
         <!--RBT BEGIN-->
         <div class="container">
+          <!--RBT PHOTO BEGIN-->
           <div class="hidden" name="id_rbt">{{id_rbt}}</div>
           <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
-          <div id={{id_rbt}}_spin style="width: 150px">
-            <img class="pano" id={{id_rbt}}_pano style="width: 150px" />
+          <div class="feed-rbt-photo" id={{id_rbt}}_spin>
+            <img class="pano" id={{id_rbt}}_pano />
           </div>
-
-          <table class="table">
+          <!--RBT PHOTO END-->
+          <!-- RBT TEXT BEGIN-->
+          <table class="feed-table">
             <tbody>
               <tr>
-                <td><img class="feed-rbt-icon" src="/images/Rose.png"/>
+                <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
                   <p class="feed-rbt-caption">Rose</p></td>
-                <td>{{rose}}</td>
+                <td class="feed-table-right">{{rose}}</td>
               </tr>
               <tr>
-                <td><img class="feed-rbt-icon" src="/images/Bud.png">
+                <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
                   <p class="feed-rbt-caption">Bud</p></td>
-                <td>{{bud}}</td>
+                <td class="feed-table-right">{{bud}}</td>
               </tr>
               <tr>
-                <td><img class="feed-rbt-icon" src="/images/Thorn.png">
+                <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
                   <p class="feed-rbt-caption">Thorn</p></td>
-                <td>{{thorn}}</td>
+                <td class="feed-table-right">{{thorn}}</td>
               </tr>
             </tbody>
           </table>
-
+          <!--RBT TEXT END-->
         </div>
         <!--RBT END-->
 
