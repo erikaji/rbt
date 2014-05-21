@@ -1,7 +1,7 @@
 body {
 	background: #DDDDDD;
 	padding-top: 50px;
-	padding-bottom: 40px;
+	padding-bottom: 50px;
 }
 
 .container {
@@ -34,7 +34,10 @@ body {
 
 .feed-photo {
 	float: left;
-	padding-right: 5px;
+	height: 35px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	width: 35px;
 }
 
 .feed-username {
@@ -60,7 +63,7 @@ body {
 /* FOOTER */
 
 .navbar-fixed-bottom {
-	min-height:30px !important
+	min-height:40px !important
 }
 
 .bottomnav1 {
@@ -68,7 +71,7 @@ body {
 }
 
 .bottomnav2 {
-	padding: 6px;
+	padding: 9px;
 	text-align: center;
 	width: 50%;
 }
@@ -83,3 +86,7 @@ body {
 	background-color: #080808;
 }
 
+td a {
+	display: block;
+	width: 100%;
+}
