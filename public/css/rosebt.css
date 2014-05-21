@@ -5,6 +5,7 @@ body {
 
 .navbar-brand {
 	font-variant: small-caps;
+	font-weight: bold;
 	font-size: 20px;
 	position: absolute;
     width: 100%;
@@ -13,11 +14,22 @@ body {
     margin: auto;
 }
 
-.nav .active {
-	color: #fff;
-	background-color: #080808;
+.bottomnav1 {
+	width: 100%;
 }
 
-.bottomnav {
+.bottomnav2 {
+	padding: 15px;
+	text-align: center;
+	width: 50%;
+}
+
+.bottomnav3 {
+	font-variant: small-caps;
 	color: white;
+}
+
+.active {
+	color: #fff;
+	background-color: #080808;
 }

@@ -14,7 +14,7 @@
   <body>
     <!--HEADER BEGIN-->
     <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-      <a class="navbar-brand" href="/" style="color:white;">Rose Bud Thorn</a>
+      <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
     </nav>
     <!--HEADER END-->
 
@@ -60,12 +60,19 @@
 
 
     <!--FOOTER BEGIN-->
-    <ul class="nav nav-justified navbar-inverse navbar-fixed-bottom">
-      <li class="active"><a class="bottomnav" href="/">Friends</a></li>
-      <li><a class="bottomnav" href="/profile">Me</a></li>
-    </ul>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="container">
+          <table class="bottomnav1">
+            <tr>
+              <td class="bottomnav2 active"><a class="bottomnav3" href="/">Friends</a></td>
+              <td class="bottomnav2"><a class="bottomnav3" href="/profile">Me</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
     <!--FOOTER END-->
-
     <!--JAVASCRIPT BEGIN-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="//cdn.firebase.com/v0/firebase.js"></script>
@@ -75,5 +82,5 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <!--JAVASCRIPT END-->
-  </body>
+</body>
 </html>
