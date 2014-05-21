@@ -1,0 +1,23 @@
+body {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.navbar-brand {
+	font-variant: small-caps;
+	font-size: 20px;
+	position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.nav .active {
+	color: #fff;
+	background-color: #080808;
+}
+
+.bottomnav {
+	color: white;
+}

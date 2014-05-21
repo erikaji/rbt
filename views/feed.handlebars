@@ -8,20 +8,20 @@
     <meta name="author" content="">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/rosebt.css" rel="stylesheet">
   </head>
  
   <body>
-    <div class="container">
-      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">RBT</a>
-          <a class="navbar-brand" href="/profile">Me</a>
-        </div>
-      </nav>
-      <br /><br /><br />
-      <h1 class="text-center">Rose Bud Thorn</h1>
-      <br />
+    <!--HEADER BEGIN-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <a class="navbar-brand" href="/" style="color:white;">Rose Bud Thorn</a>
+    </nav>
+    <!--HEADER END-->
 
+
+
+    <!--CONTENT BEGIN-->
+    <div class="container">
       {{#each rbt}}
       <div class="well">
         <img src={{photo_user}} width="50" height="50">
@@ -55,10 +55,18 @@
       </div>
       {{/each}}
     </div>
+    <!--CONTENT END-->
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
 
+
+    <!--FOOTER BEGIN-->
+    <ul class="nav nav-justified navbar-inverse navbar-fixed-bottom">
+      <li class="active"><a class="bottomnav" href="/">Friends</a></li>
+      <li><a class="bottomnav" href="/profile">Me</a></li>
+    </ul>
+    <!--FOOTER END-->
+
+    <!--JAVASCRIPT BEGIN-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="//cdn.firebase.com/v0/firebase.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
@@ -66,5 +74,6 @@
     <script type="text/javascript" src="/js/fbRetrive.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-</body>
+    <!--JAVASCRIPT END-->
+  </body>
 </html>
