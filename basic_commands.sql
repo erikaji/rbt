@@ -1,7 +1,12 @@
 # VIEWING TABLES
 SELECT * FROM rbt; # this allows you to view the entire table
+SELECT * FROM user;
 SELECT * FROM user WHERE (id_user=2); # specify which rows/cols to view
 SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user);
+SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user != 2) ORDER BY created_at DESC;
+SELECT id_rbt, rbt.id_user, DATE_FORMAT(created_at, "%Y-%m-%dT%TZ") as created_at, photo_rbt, rose, bud, thorn, user.id_user, name, photo_user, facebook_id FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user != 2) ORDER BY created_at DESC;
+
+
 
 # INSERTING ROWS
 INSERT INTO user VALUES (1, 'Priya', 'Shekar', 'https://scontent-b.xx.fbcdn.net/hphotos-prn1/t1.0-9/1625699_10151879794022816_1076038618_n.jpg');

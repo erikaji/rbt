@@ -1,7 +1,15 @@
 body {
-	padding-top: 70px;
-	padding-bottom: 70px;
+	background: #DDDDDD;
+	padding-top: 50px;
+	padding-bottom: 40px;
 }
+
+.container {
+	padding-left: 7px; /* left & right margin for wells */
+	padding-right: 7px;
+}
+
+/* HEADER */
 
 .navbar-brand {
 	font-variant: small-caps;
@@ -14,12 +22,53 @@ body {
     margin: auto;
 }
 
+
+
+/* CONTENT - FEED */
+
+.well {
+	background: white;
+	margin-top: 7px; /* top and bottom margin for wells */
+	margin-bottom: 0px;
+}
+
+.feed-photo {
+	float: left;
+	padding-right: 5px;
+}
+
+.feed-username {
+	font-weight: bold;
+}
+
+.feed-datetime {
+	font-size: 10px;
+}
+
+.feed-rbt-icon {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35px;
+}
+
+.feed-rbt-caption {
+	font-size: 10px;
+	text-align: center;
+}
+
+/* FOOTER */
+
+.navbar-fixed-bottom {
+	min-height:30px !important
+}
+
 .bottomnav1 {
 	width: 100%;
 }
 
 .bottomnav2 {
-	padding: 15px;
+	padding: 6px;
 	text-align: center;
 	width: 50%;
 }
@@ -33,3 +82,4 @@ body {
 	color: #fff;
 	background-color: #080808;
 }
+
