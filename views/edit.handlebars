@@ -22,12 +22,10 @@
       <h1 class="text-center">Rose Bud Thorn</h1>
       <br />
 
-      {{#each rbt}}
       <center>
-        <img src={{photo_user}} style="width: 150px; height: 150px;">
-        <h3>{{name}}</h3>
+        <img src={{rbt.[0].photo_user}} style="width: 150px; height: 150px;">
+        <h3>{{rbt.[0].name}}</h3>
       </center>
-      {{/each}}
 
       <form name="input" action="profile" method="post">
         <table class="table" style="margin-top:30px;">
