@@ -6,8 +6,6 @@ SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user);
 SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user = 2) ORDER BY created_at DESC;
 SELECT id_rbt, rbt.id_user, DATE_FORMAT(created_at, "%Y-%m-%dT%TZ") as created_at, photo_rbt, rose, bud, thorn, user.id_user, name, photo_user, facebook_id FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user != 2) ORDER BY created_at DESC;
 
-
-
 # INSERTING NEW ROWS
 INSERT INTO user VALUES (1, 'Priya', 'Shekar', 'https://scontent-b.xx.fbcdn.net/hphotos-prn1/t1.0-9/1625699_10151879794022816_1076038618_n.jpg');
 INSERT INTO user VALUES (2, 'Yiju', 'Hou', 'https://scontent-a.xx.fbcdn.net/hphotos-prn2/t1.0-9/10271503_10202037355675443_6443827598245086838_n.jpg');
@@ -29,8 +27,8 @@ ALTER TABLE user CHANGE COLUMN photo photo_user VARCHAR(200);
 ALTER TABLE user CHANGE COLUMN name firstname VARCHAR(200);
 ALTER TABLE user ADD COLUMN lastname VARCHAR(200);
 ALTER TABLE user MODIFY lastname VARCHAR(45);
-ALTER TABLE rbt MODIFY id_rbt AUTO_INCREMENT = 0;
-
+ALTER TABLE rbt MODIFY id_rbt INT AUTO_INCREMENT;
+ALTER TABLE rbt ADD COLUMN photo_tag VARCHAR(10);
 
 # UPDATING VALUES
 UPDATE user SET photo='https://scontent-b.xx.fbcdn.net/hphotos-prn1/t1.0-9/1625699_10151879794022816_1076038618_n.jpg' WHERE id_user=1;
@@ -49,7 +47,7 @@ UPDATE user SET lastname='Shekar' WHERE id_user=1;
 UPDATE user SET lastname='Hou' WHERE id_user=2;
 UPDATE user SET lastname='Ji' WHERE id_user=3;
 UPDATE rbt SET rose='newrose' WHERE id_rbt=3;
-
+UPDATE rbt SET photo_tag='thorn' WHERE id_rbt=1;
 
 # DELETING ROWS
 DELETE FROM rbt WHERE id_rbt=0;
