@@ -103,6 +103,22 @@ a:active {
 
 
 
+/* CONTENT - PROFILE */
+
+.profile-userphoto {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	height: 100px;
+	width: 100px;
+}
+
+.profile-username {
+	
+}
+
+
+
 /* FOOTER */
 
 .navbar-fixed-bottom {

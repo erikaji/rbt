@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,64 +8,111 @@
     <meta name="author" content="">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/rosebt.css" rel="stylesheet">
   </head>
  
   <body>
-    <div class="container">
-      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">RBT</a>
-          <a class="navbar-brand" href="/profile">Me</a>
-        </div>
-      </nav>
-      <br /><br /><br />
-      <h1 class="text-center">Rose Bud Thorn</h1>
-      <br />
+    <!--HEADER BEGIN-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
+    </nav>
+    <!--HEADER END-->
 
-      
-        <center>
-          <img src={{rbt.[0].photo_user}} style="width: 150px; height: 150px;">
-          <h3>{{rbt.[0].name}}</h3>
-        
 
+
+    <!--CONTENT BEGIN-->
+      <div class="container">
+        <!--USER PROFILE BEGIN-->
+        <img class="profile-userphoto" src={{rbt.[0].photo_user}}>
+        <span class="profile-username">
+          {{rbt.[0].firstname}}<br />{{rbt.[0].lastname}}
+        </span>
+        <!--USER PROFILE END-->
+
+
+
+        <!--RBT HISTORY BEGIN-->
         {{#each rbt}}
-        <div class="hidden" name="id_rbt">{{id_rbt}}</div>
-        <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
-        
-        <table border="0" class="table" style="margin-top:30px;">
-          <tbody>
-            <tr style="height: 150px">
-              <td id={{id_rbt}}_spin style="width: 150px">
-                  <img class="pano" id={{id_rbt}}_pano style="width: 150px" />
-              </td>
-              <td>
-                <span class="label label-danger">Rose</span>
-                {{rose}}
-              </td>
-            </tr>
-            <tr style="height: 150px">
-              <td style="text-align: center;">
-                <span class="label label-success">Bud</span>
-                {{bud}}
-              </td>
-              <td>
-                <b></b>
-                <span class="label label-warning">Thorn</span>
-                {{thorn}}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br />
+        <div class="well well-sm">
+          <!--USER AND TIMESTAMP BEGIN-->
+          <a href="/friend/{{id_user}}"}>
+            <img class="feed-userphoto" src={{photo_user}}>
+            <span class="feed-username">{{firstname}} {{lastname}}</span>
+          </a>
+          <div class="feed-datetime">
+            <abbr class="timeago" style="border:none" title={{created_at}}></abbr>
+          </div>
+          <!--USER AND TIMESTAMP END-->
+          <!--RBT BEGIN-->
+          <div class="container">
+            <!--RBT PHOTO BEGIN-->
+            <div class="hidden" name="id_rbt">{{id_rbt}}</div>
+            <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
+            <div class="feed-rbt-photo" id={{id_rbt}}_spin>
+              <img class="pano" id={{id_rbt}}_pano />
+            </div>
+            <!--RBT PHOTO END-->
+            <!-- RBT TEXT BEGIN-->
+            <table class="feed-table">
+              <tbody>
+                <tr>
+                  <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
+                    <p class="feed-rbt-caption">Rose</p></td>
+                  <td class="feed-table-right">{{rose}}</td>
+                </tr>
+                <tr>
+                  <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
+                    <p class="feed-rbt-caption">Bud</p></td>
+                  <td class="feed-table-right">{{bud}}</td>
+                </tr>
+                <tr>
+                  <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
+                    <p class="feed-rbt-caption">Thorn</p></td>
+                  <td class="feed-table-right">{{thorn}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--RBT TEXT END-->
+          </div>
+          <!--RBT END-->
+      </div>
       {{/each}}
-    </div>
+      <!--RBT HISTORY END-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+    </div>
+    <!--CONTENT END-->
+
+
+
+    <!--FOOTER BEGIN-->
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="container">
+          <table class="bottomnav1">
+            <tr>
+              <td class="bottomnav2 active"><a class="bottomnav3" href="/">Friends</a></td>
+              <td class="bottomnav2"><a class="bottomnav3" href="/profile">Me</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER END-->
+    <!--JAVASCRIPT BEGIN-->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
     <script src="//cdn.firebase.com/v0/firebase.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
     <script type="text/javascript" src="/js/sha256.js"></script>
     <script type="text/javascript" src="/js/fbRetrive.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-</body>
+    <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
+    <script type="text/javascript">
+       jQuery(document).ready(function() {
+         $("abbr.timeago").timeago();
+       });
+    </script>
+    <!--JAVASCRIPT END-->
+  </body>
 </html>
