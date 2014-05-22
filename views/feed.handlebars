@@ -22,6 +22,10 @@
 
     <!--CONTENT BEGIN-->
     <div class="container">
+      <div id="no_filter"> All </div>
+      <div id="rose_filter"}> Rose </div>
+      <div id="bud_filter"}> Bud </div>
+      <div id="thorn_filter"}> Thorn </div>
       {{#each rbt}}
       <div class="well well-sm">
         <!--USER AND TIMESTAMP BEGIN-->
@@ -48,17 +52,17 @@
           <!-- RBT TEXT BEGIN-->
           <table class="feed-table">
             <tbody>
-              <tr>
+              <tr name="rose_tr">
                 <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
                   <p class="feed-rbt-caption">Rose</p></td>
                 <td class="feed-table-right">{{rose}}</td>
               </tr>
-              <tr>
+              <tr name="bud_tr">
                 <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
                   <p class="feed-rbt-caption">Bud</p></td>
                 <td class="feed-table-right">{{bud}}</td>
               </tr>
-              <tr>
+              <tr name="thorn_tr">
                 <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
                   <p class="feed-rbt-caption">Thorn</p></td>
                 <td class="feed-table-right">{{thorn}}</td>
@@ -99,6 +103,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
     <script type="text/javascript" src="/js/sha256.js"></script>
     <script type="text/javascript" src="/js/fbRetrive.js"></script>
+    <script type="text/javascript" src="/js/filter.js"></script>
     <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
     <script type="text/javascript">
        jQuery(document).ready(function() {
