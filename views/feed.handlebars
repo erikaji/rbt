@@ -16,17 +16,18 @@
     <!--HEADER BEGIN-->
     <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
       <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
-      <!-- filter button -->
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Filter <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li id="rose_filter"><a href="#Rose"> Rose </a></li>
-          <li id="bud_filter"><a href="#Bud"> Bud </a></li>
-          <li id="thorn_filter"><a href="#Thorn"> Thorn </a></li>
-          <li id="no_filter"><a href=""> All </a></li>
-        </ul>
+      <div class="pull-right filter-button">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Filter <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li id="rose_filter"><a href="#Rose"> Rose </a></li>
+              <li id="bud_filter"><a href="#Bud"> Bud </a></li>
+              <li id="thorn_filter"><a href="#Thorn"> Thorn </a></li>
+              <li id="no_filter"><a href=""> All </a></li>
+            </ul>
+          </div>
       </div>
     </nav>
     <!--HEADER END-->
@@ -119,8 +120,7 @@
     <script type="text/javascript" src="/js/fbRetrive.js"></script>
     <script type="text/javascript" src="/js/filter.js"></script>
 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script src="/js/screenfull.js"></script>
   <script>
 //   $(function() {
@@ -177,10 +177,8 @@
 //     screenfull.onchange();
 
 //   });
-  </script>
-
+  </script>-->
     <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
-    <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
        jQuery(document).ready(function() {
          $("abbr.timeago").timeago();

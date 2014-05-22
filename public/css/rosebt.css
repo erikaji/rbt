@@ -28,6 +28,11 @@ a:active {
     margin: auto;
 }
 
+.filter-button {
+	margin-top: 7px;
+	margin-right: 7px;
+}
+
 
 
 /* CONTENT - FEED */
