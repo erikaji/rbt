@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta itemprop="name" content="screenfull.js">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/rosebt.css" rel="stylesheet">
@@ -15,6 +16,18 @@
     <!--HEADER BEGIN-->
     <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
       <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
+      <!-- filter button -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Filter <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li id="rose_filter"><a href="#Rose"> Rose </a></li>
+          <li id="bud_filter"><a href="#Bud"> Bud </a></li>
+          <li id="thorn_filter"><a href="#Thorn"> Thorn </a></li>
+          <li id="no_filter"><a href=""> All </a></li>
+        </ul>
+      </div>
     </nav>
     <!--HEADER END-->
 
@@ -22,15 +35,6 @@
 
     <!--CONTENT BEGIN-->
     <div class="container">
-
-
-    <!--TODO: make it pretty :)-->
-      <div id="no_filter"> All </div>
-      <div id="rose_filter"}> Rose </div>
-      <div id="bud_filter"}> Bud </div>
-      <div id="thorn_filter"}> Thorn </div>
-
-      
       {{#each rbt}}
       <div class="well well-sm">
         <!--USER AND TIMESTAMP BEGIN-->
@@ -102,19 +106,82 @@
     </div>
     <!--FOOTER END-->
     <!--JAVASCRIPT BEGIN-->
-    <script src="/js/bootstrap.min.js"></script>
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
     <script src="//cdn.firebase.com/v0/firebase.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
     <script type="text/javascript" src="/js/sha256.js"></script>
     <script type="text/javascript" src="/js/fbRetrive.js"></script>
     <script type="text/javascript" src="/js/filter.js"></script>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="/js/screenfull.js"></script>
+  <script>
+  $(function() {
+
+    $('#supported').text( 'Supported: ' + !!screenfull );
+
+    if ( !screenfull ) {
+      return false;
+    }
+
+    $('#request').click(function() {
+      screenfull.request( $('#container')[0] );
+      // Does not require jQuery, can be used like this too:
+      // screenfull.request( document.getElementById('container') );
+    });
+
+    $('#exit').click(function() {
+      screenfull.exit();
+    });
+
+    $('#toggle').click(function() {
+      screenfull.toggle( $('#container')[0] );
+    });
+
+    $('#request2').click(function() {
+      screenfull.request();
+    });
+
+    function callBack(rbt){
+      return $('#'+rbt+'_pano').click(function() {
+      screenfull.toggle( this );
+    });
+}
+
+    rbts = document.getElementsByName("id_rbt");
+    var funcs = [];
+    for (var i = 0; i < rbts.length; i++) {  
+      var rbt = rbts[i].innerHTML;
+      funcs[i] = callBack(rbt); 
+    }
+
+    $('#demo-video').click(function() {
+      screenfull.toggle( this );
+    })
+
+    screenfull.onchange = function( e ) {
+      $('#status').text( 'Is fullscreen: ' + screenfull.isFullscreen );
+      var elem = screenfull.element;
+      if ( elem ) {
+        $('#element').text( 'Element: ' + elem.localName + ( elem.id ? '#' + elem.id : '' ) );
+      }
+    };
+
+    screenfull.onchange();
+
+  });
+  </script>
+
     <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
        jQuery(document).ready(function() {
          $("abbr.timeago").timeago();
        });
     </script>
+
+      
     <!--JAVASCRIPT END-->
   </body>
 </html>
