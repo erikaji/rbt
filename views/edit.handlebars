@@ -31,52 +31,78 @@
         </div>
         <!--USER PROFILE END-->
 
-      <form name="input" action="profile" method="post">
-        <table class="table" style="margin-top:30px;">
-          <tbody>
-            <tr style="height: 150px">
-              <td>
-                <span class="label label-default pull-left">Photo</span>
-                <textarea id="photo" name="photo" maxlength="199" class="form-control" style="margin: 0px; height: 140px; width: 129px;"></textarea>
-              </td>
-              <td>
-                <span class="label label-danger pull-left">Rose</span>
-                <textarea name="rose" maxlength="199" class="form-control" style="margin: 0px; height: 140px; width: 129px;"></textarea>
-              </td>
-            </tr>
-            <tr style="height: 150px">
-              <td style="text-align: center;" class="text-left">
-                <span class="label label-success pull-left">Bud</span>
-                <textarea name="bud" maxlength="199" class="form-control" style="margin: 0px; height: 140px; width: 129px;"></textarea>
-              </td>
-              <td>
-                <b></b>
-                <span class="label label-warning pull-left">Thorn</span>
-                <textarea name="thorn" maxlength="199" class="form-control" style="margin: 0px; height: 140px; width: 129px;"></textarea>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <center><input type="submit" value="Submit"></center>
-        <br />
-      </form>
-
+        <form name="input" action="profile" method="post">
+          <div class="well well-sm">
+            <center><h4>Update Status</h4></center>
+            <div class="container">
+              <table class="feed-table">
+                <tbody>
+                  <tr>
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
+                      <p class="feed-rbt-caption">Rose</p></td>
+                    <td class="feed-table-right">
+                      <textarea name="rose" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
+                      <p class="feed-rbt-caption">Bud</p></td>
+                    <td class="feed-table-right">
+                      <textarea name="bud" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
+                      <p class="feed-rbt-caption">Thorn</p></td>
+                    <td class="feed-table-right">
+                      <textarea name="thorn" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feed-table-left">
+                      <p class="feed-rbt-caption">Photo Upload</p></td>
+                    <td class="feed-table-right">
+                      <div id="spin"></div>
+                      <input type="file" accept="image/*" capture="camera" id="file-upload">
+                      <img class="pano" id="pano" />
+                      <textarea id="photo" name="photo" maxlength="199" class="form-control" style="display: none;"></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <center>
+                <input type="submit" value="Submit">
+              </center>
+            </div>
+          </div>
+        </form>
 
     </div>
+    <!--CONTENT END-->
 
 
-    <div id="spin"></div>
-    <h1>Upload</h1>
-    <input type="file" accept="image/*" capture="camera" id="file-upload">
-    <br/>
-    <img class="pano" id="pano" />
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!--FOOTER BEGIN-->
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="container">
+          <table class="bottomnav1">
+            <tr>
+              <td class="bottomnav2"><a class="bottomnav3" href="/">Friends</a></td>
+              <td class="bottomnav2 active"><a class="bottomnav3" href="/profile">Me</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER END-->
+    <!--JAVASCRIPT BEGIN-->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="//cdn.firebase.com/v0/firebase.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
     <script type="text/javascript" src="/js/sha256.js"></script>
+    <script type="text/javascript" src="/js/fbRetrive.js"></script>
     <script type="text/javascript" src="/js/firepano.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-</body>
+    <!--JAVASCRIPT END-->
+  </body>
 </html>
