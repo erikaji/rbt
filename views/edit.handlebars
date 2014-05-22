@@ -8,24 +8,28 @@
     <meta name="author" content="">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/rosebt.css" rel="stylesheet">
   </head>
  
   <body>
-    <div class="container">
-      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">RBT</a>
-          <a class="navbar-brand" href="/profile">Me</a>
-        </div>
-      </nav>
-      <br /><br /><br />
-      <h1 class="text-center">Rose Bud Thorn</h1>
-      <br />
+    <!--HEADER BEGIN-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
+    </nav>
+    <!--HEADER END-->
 
-      <center>
-        <img src={{rbt.[0].photo_user}} style="width: 150px; height: 150px;">
-        <h3>{{rbt.[0].name}}</h3>
-      </center>
+
+
+    <!--CONTENT BEGIN-->
+      <div class="container">
+        <!--USER PROFILE BEGIN-->
+        <div class="centerbox">
+          <img class="profile-userphoto" src={{rbt.[0].photo_user}}>
+          <div class="profile-username">
+            <p>{{rbt.[0].firstname}}<br />{{rbt.[0].lastname}}</p>
+          </div>
+        </div>
+        <!--USER PROFILE END-->
 
       <form name="input" action="profile" method="post">
         <table class="table" style="margin-top:30px;">
