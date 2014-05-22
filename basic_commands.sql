@@ -5,6 +5,7 @@ SELECT * FROM user WHERE (id_user=2); # specify which rows/cols to view
 SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user);
 SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user = 2) ORDER BY created_at DESC;
 SELECT id_rbt, rbt.id_user, DATE_FORMAT(created_at, "%Y-%m-%dT%TZ") as created_at, photo_rbt, rose, bud, thorn, user.id_user, name, photo_user, facebook_id FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user != 2) ORDER BY created_at DESC;
+SELECT id_rbt, rbt.id_user, DATE_FORMAT(created_at, "%Y-%m-%dT%TZ") as created_at, photo_rbt, IF(photo_tag="rose", 1, 0) as rosetag, IF(photo_tag="bud", 1, 0) as budtag, IF(photo_tag="thorn", 1, 0) as thorntag, photo_tag FROM (rbt, user) WHERE (rbt.id_user = user.id_user) ORDER BY created_at DESC;
 
 # INSERTING NEW ROWS
 INSERT INTO user VALUES (1, 'Priya', 'Shekar', 'https://scontent-b.xx.fbcdn.net/hphotos-prn1/t1.0-9/1625699_10151879794022816_1076038618_n.jpg');

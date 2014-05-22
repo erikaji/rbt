@@ -64,6 +64,20 @@
           <!--RBT BEGIN-->
           <div class="container">
             <!--RBT PHOTO BEGIN-->
+            <br />
+            {{#if rosetag}}
+              <img class="feed-rbt-icon overlap" src="/images/Rose.png"/>
+              <p class="feed-rbt-caption">Rose</p>
+            {{/if}}
+            {{#if budtag}}
+              <img class="feed-rbt-icon overlap" src="/images/Bud.png">
+              <p class="feed-rbt-caption">Bud</p></td>
+            {{/if}}
+            {{#if thorntag}}
+              <img class="feed-rbt-icon overlap" src="/images/Thorn.png">
+              <p class="feed-rbt-caption">Thorn</p></td>
+            {{/if}}
+
             <div class="hidden" name="id_rbt">{{id_rbt}}</div>
             <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
             <div class="feed-rbt-photo" id={{id_rbt}}_spin>
