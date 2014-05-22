@@ -37,6 +37,11 @@
     <div class="container">
       {{#each rbt}}
       <div class="well well-sm">
+        <div style="float:right;">
+          {{#if rosetag}}<img class="feed-rbt-icon-overlap" src="/images/Rose.png"/>{{/if}}
+          {{#if budtag}}<img class="feed-rbt-icon-overlap" src="/images/Bud.png">{{/if}}
+          {{#if thorntag}}<img class="feed-rbt-icon-overlap" src="/images/Thorn.png">{{/if}}
+        </div>
         <!--USER AND TIMESTAMP BEGIN-->
         <a href="/friend/{{id_user}}"}>
           <img class="feed-userphoto" src={{photo_user}}>

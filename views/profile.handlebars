@@ -52,6 +52,11 @@
         <!--RBT HISTORY BEGIN-->
         {{#each rbt}}
         <div class="well well-sm">
+          <div style="float:right;">
+            {{#if rosetag}}<img class="feed-rbt-icon-overlap" src="/images/Rose.png"/>{{/if}}
+            {{#if budtag}}<img class="feed-rbt-icon-overlap" src="/images/Bud.png">{{/if}}
+            {{#if thorntag}}<img class="feed-rbt-icon-overlap" src="/images/Thorn.png">{{/if}}
+          </div>
           <!--USER AND TIMESTAMP BEGIN-->
           <a href="/friend/{{id_user}}"}>
             <img class="feed-userphoto" src={{photo_user}}>
@@ -60,31 +65,18 @@
           <div class="feed-datetime">
             <abbr class="timeago" style="border:none" title={{created_at}}></abbr>
           </div>
+
           <!--USER AND TIMESTAMP END-->
           <!--RBT BEGIN-->
+          <!--RBT PHOTO BEGIN-->
+          <div class="hidden" name="id_rbt">{{id_rbt}}</div>
+          <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
+          <div class="feed-rbt-photo" id={{id_rbt}}_spin>
+            <img class="pano" id={{id_rbt}}_pano />
+          </div>
+          <!--RBT PHOTO END-->
+          <!-- RBT TEXT BEGIN-->
           <div class="container">
-            <!--RBT PHOTO BEGIN-->
-            <br />
-            {{#if rosetag}}
-              <img class="feed-rbt-icon overlap" src="/images/Rose.png"/>
-              <p class="feed-rbt-caption">Rose</p>
-            {{/if}}
-            {{#if budtag}}
-              <img class="feed-rbt-icon overlap" src="/images/Bud.png">
-              <p class="feed-rbt-caption">Bud</p></td>
-            {{/if}}
-            {{#if thorntag}}
-              <img class="feed-rbt-icon overlap" src="/images/Thorn.png">
-              <p class="feed-rbt-caption">Thorn</p></td>
-            {{/if}}
-
-            <div class="hidden" name="id_rbt">{{id_rbt}}</div>
-            <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
-            <div class="feed-rbt-photo" id={{id_rbt}}_spin>
-              <img class="pano" id={{id_rbt}}_pano />
-            </div>
-            <!--RBT PHOTO END-->
-            <!-- RBT TEXT BEGIN-->
             <table class="feed-table">
               <tbody>
                 <tr name="rose_tr">

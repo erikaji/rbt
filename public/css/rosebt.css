@@ -101,6 +101,14 @@ a:active {
 	text-align: center;
 }
 
+.feed-rbt-icon-overlap {
+	width: 30px;
+	z-index: 50;
+	position: relative;
+	top: 55px;
+	right: 235px;
+}
+
 
 
 /* CONTENT - PROFILE */
