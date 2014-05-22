@@ -115,6 +115,7 @@ a:active {
 }
 
 .feed-rbt-icon-overlap {
+	height: 30px;
 	width: 30px;
 	z-index: 50;
 	position: relative;
