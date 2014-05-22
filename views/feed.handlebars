@@ -117,60 +117,60 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script src="/js/screenfull.js"></script>
   <script>
-  $(function() {
+//   $(function() {
 
-    $('#supported').text( 'Supported: ' + !!screenfull );
+//     $('#supported').text( 'Supported: ' + !!screenfull );
 
-    if ( !screenfull ) {
-      return false;
-    }
+//     if ( !screenfull ) {
+//       return false;
+//     }
 
-    $('#request').click(function() {
-      screenfull.request( $('#container')[0] );
-      // Does not require jQuery, can be used like this too:
-      // screenfull.request( document.getElementById('container') );
-    });
+//     $('#request').click(function() {
+//       screenfull.request( $('#container')[0] );
+//       // Does not require jQuery, can be used like this too:
+//       // screenfull.request( document.getElementById('container') );
+//     });
 
-    $('#exit').click(function() {
-      screenfull.exit();
-    });
+//     $('#exit').click(function() {
+//       screenfull.exit();
+//     });
 
-    $('#toggle').click(function() {
-      screenfull.toggle( $('#container')[0] );
-    });
+//     $('#toggle').click(function() {
+//       screenfull.toggle( $('#container')[0] );
+//     });
 
-    $('#request2').click(function() {
-      screenfull.request();
-    });
+//     $('#request2').click(function() {
+//       screenfull.request();
+//     });
 
-    function callBack(rbt){
-      return $('#'+rbt+'_pano').click(function() {
-      screenfull.toggle( this );
-    });
-}
+//     function callBack(rbt){
+//       return $('#'+rbt+'_pano').click(function() {
+//       screenfull.toggle( this );
+//     });
+// }
 
-    rbts = document.getElementsByName("id_rbt");
-    var funcs = [];
-    for (var i = 0; i < rbts.length; i++) {  
-      var rbt = rbts[i].innerHTML;
-      funcs[i] = callBack(rbt); 
-    }
+//     rbts = document.getElementsByName("id_rbt");
+//     var funcs = [];
+//     for (var i = 0; i < rbts.length; i++) {  
+//       var rbt = rbts[i].innerHTML;
+//       funcs[i] = callBack(rbt); 
+//     }
 
-    $('#demo-video').click(function() {
-      screenfull.toggle( this );
-    })
+//     $('#demo-video').click(function() {
+//       screenfull.toggle( this );
+//     })
 
-    screenfull.onchange = function( e ) {
-      $('#status').text( 'Is fullscreen: ' + screenfull.isFullscreen );
-      var elem = screenfull.element;
-      if ( elem ) {
-        $('#element').text( 'Element: ' + elem.localName + ( elem.id ? '#' + elem.id : '' ) );
-      }
-    };
+//     screenfull.onchange = function( e ) {
+//       $('#status').text( 'Is fullscreen: ' + screenfull.isFullscreen );
+//       var elem = screenfull.element;
+//       if ( elem ) {
+//         $('#element').text( 'Element: ' + elem.localName + ( elem.id ? '#' + elem.id : '' ) );
+//       }
+//     };
 
-    screenfull.onchange();
+//     screenfull.onchange();
 
-  });
+//   });
   </script>
 
     <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
