@@ -24,7 +24,8 @@
     <div class="container">
       {{#each rbt}}
       <div class="well">
-        <img src={{photo_user}} width="50" height="50">
+        <!-- <img src={{photo_user}} width="50" height="50"> -->
+        <img src={{pictureURL}} width="50" height="50">
         <h5><a href="/friend/{{id_user}}"}>{{name}}</a></h5>
 
         <h5>{{created_at}}</h5>
@@ -67,6 +68,7 @@
             <tr>
               <td class="bottomnav2 active"><a class="bottomnav3" href="/">Friends</a></td>
               <td class="bottomnav2"><a class="bottomnav3" href="/profile">Me</a></td>
+              <td class="bottomnav2"><a class="bottomnav3" href="/logout">Logout</a></td>
             </tr>
           </table>
         </div>

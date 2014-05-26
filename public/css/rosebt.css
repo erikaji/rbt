@@ -33,3 +33,7 @@ body {
 	color: #fff;
 	background-color: #080808;
 }
+
+.FBlogin {
+	background-image: url('/images/FBlogin.png');
+}
