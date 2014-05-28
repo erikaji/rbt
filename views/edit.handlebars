@@ -31,11 +31,11 @@
         </div>
         <!--USER PROFILE END-->
 
-        <form name="input" action="profile" method="post">
+        <form name="input" action="profile" method="post" onsubmit="return validateForm()">
           <div class="well well-sm">
             <center><h4>Update Status</h4></center>
             <div class="container">
-              <table class="feed-table">
+              <table class="feed-table" id="table1">
                 <tbody>
                   <tr>
                     <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
@@ -60,7 +60,7 @@
                   </tr>
                   <tr>
                     <td class="feed-table-left">
-                      <p class="feed-rbt-caption">Photo Upload</p></td>
+                      <p class="feed-rbt-caption">Photo Upload (Optional)</p></td>
                     <td class="feed-table-right">
                       <div id="spin"></div>
                       <input type="file" accept="image/*" capture="camera" id="file-upload">
@@ -68,9 +68,10 @@
                       <textarea id="photo" name="photo" maxlength="199" class="form-control" style="display: none;"></textarea>
                     </td>
                   </tr>
-                  <tr>
+                  <a href="#" onClick="return toggle('photo-type')")>SHOW ROW</a>
+                  <tr id="photo-type">
                     <td class="feed-table-left">
-                      <p class="feed-rbt-caption">Photo Type</p></td>
+                      <p class="feed-rbt-caption">What kind of photo are you sharing?</p></td>
                     <td class="feed-table-right">
                       <!--Nicer UI; can implement later
                       <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">Rose</button></div>
@@ -87,7 +88,7 @@
                         <input name="photo_tag" type="radio" id="tag_thorn" value="thorn"><img class="form-rbt-icon" src="/images/Thorn.png"/><p class="feed-rbt-caption">Thorn</p>
                       </label>
                       <label class="radio-inline">
-                        <input name="photo_tag" type="radio" id="tag_none" value="" checked> No Photo
+                        <input name="photo_tag" type="radio" id="tag_none" value="" checked><!--No Photo-->
                       </label>
                     </td>
                   </tr>
@@ -119,6 +120,7 @@
     </div>
     <!--FOOTER END-->
     <!--JAVASCRIPT BEGIN-->
+    <script src="/js/formvalidation.js"></script>
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="//cdn.firebase.com/v0/firebase.js"></script>

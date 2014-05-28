@@ -19,6 +19,7 @@ function handleFileSelect(evt) {
         // Update the location bar so the URL can be shared with others
         window.location.hash = hash;
         document.getElementById("photo").value = hash;
+        document.getElementById('photo-type').style.display = 'table-row';
       });
     };
   })(f);
@@ -34,6 +35,7 @@ $(function() {
     // No hash found, so render the file upload button.
     $('#file-upload').show();
     document.getElementById("file-upload").addEventListener('change', handleFileSelect, false);
+
   } else {
     // A hash was passed in, so let's retrieve and render it.
     spinner.spin(document.getElementById('spin'));

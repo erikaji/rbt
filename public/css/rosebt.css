@@ -149,6 +149,22 @@ div.profile-username {
 
 
 
+
+
+/* CONTENT - EDIT */
+
+#photo-type {
+	display: none;
+}
+
+input[type="radio"][value=""]{
+    visibility:hidden;
+}
+
+
+
+
+
 /* FOOTER */
 
 .navbar-fixed-bottom {

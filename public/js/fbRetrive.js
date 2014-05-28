@@ -29,6 +29,7 @@
     if (hash === '') {
       // No hash found, so render the file upload button.
     } else {
+
       // A hash was passed in, so let's retrieve and render it.
       spinner.spin(document.getElementById(rbt+"_spin"));
       var f = new Firebase(firebaseRef + '/pano/' + hash + '/filePayload');
