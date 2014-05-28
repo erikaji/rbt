@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta itemprop="name" content="screenfull.js">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/rosebt.css" rel="stylesheet">
@@ -58,11 +57,12 @@
         <!--RBT BEGIN-->
         <!--RBT PHOTO BEGIN--> 
         <div class="hidden" name="id_rbt">{{id_rbt}}</div>
-          <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
-          <div class="feed-rbt-photo" id={{id_rbt}}_spin name={{photo_tag}}_tr>
-            <img class="pano" id={{id_rbt}}_pano />
-          </div>
-        <!--RBT PHOTO END-->   
+        <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
+        <div class="feed-rbt-photo" id={{id_rbt}}_spin name={{photo_tag}}_tr>
+          <img class="pano" id={{id_rbt}}_pano />
+        </div>
+        <!--RBT PHOTO END-->  
+
         <!-- RBT TEXT BEGIN-->
         <div class="container">      
           <table class="feed-table">
@@ -87,11 +87,11 @@
           <!--RBT TEXT END-->
         </div>
         <!--RBT END-->
-
-
-
       </div>
       {{/each}}
+
+
+      
     </div>
     <!--CONTENT END-->
 

@@ -28,33 +28,6 @@
             </ul>
           </div>
       </div>
-      <!--
-        <ul class="nav navbar-nav pull-right" style="margin-right: 5px;">
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            Filter <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li id="rose_filter"><a href="#Rose"> Rose </a></li>
-              <li id="bud_filter"><a href="#Bud"> Bud </a></li>
-              <li id="thorn_filter"><a href="#Thorn"> Thorn </a></li>
-              <li id="no_filter"><a href=""> All </a></li>
-            </ul>
-          </div>
-          
-          OLD UI
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter<b class="caret"></b></a>
-            <ul class="dropdown-menu" role="menu">
-              <li id="rose_filter"><a href="#Rose"> Rose </a></li>
-              <li id="bud_filter"><a href="#Bud"> Bud </a></li>
-              <li id="thorn_filter"><a href="#Thorn"> Thorn </a></li>
-              <li id="no_filter"><a href=""> All </a></li>
-            </ul>
-          </li>
-          
-        </ul>-->
-
     </nav>
     <!--HEADER END-->
 
@@ -93,8 +66,10 @@
           <div class="feed-datetime">
             <abbr class="timeago" style="border:none" title={{created_at}}></abbr>
           </div>
-
           <!--USER AND TIMESTAMP END-->
+
+
+
           <!--RBT BEGIN-->
           <!--RBT PHOTO BEGIN-->
           <div class="hidden" name="id_rbt">{{id_rbt}}</div>
@@ -103,6 +78,7 @@
             <img class="pano" id={{id_rbt}}_pano />
           </div>
           <!--RBT PHOTO END-->
+          
           <!-- RBT TEXT BEGIN-->
           <div class="container">
             <table class="feed-table">
