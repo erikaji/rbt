@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" id="splash">
+<html lang="en">
 
- <!--JAVASCRIPT BEGIN-->
- <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
- <!--JAVASCRIPT END-->
+<!--JAVASCRIPT BEGIN-->
+<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+<!--JAVASCRIPT END-->
 
 <script>
 $(document).ready(function(){
-    $("html").fadeOut(5000) //time in ms
+	$("#login-splash").fadeOut(5000, function() {
+		$("#login-content").show();
+ }) //time in ms
 });
 </script>
 
 <head>
-  <title>Rose Bud Thorn</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="/css/rosebt.css" rel="stylesheet">
+	<title>Rose Bud Thorn</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/rosebt.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-</body>
+	<div id="login-all">
+		<div id="login-splash"><img src="/images/SplashScreen.png" id="login-image"></div>
+		<div id="login-content">
+			<p id="login-welcome">Welcome</p>
+			<p id="login-intro">Rose Bud Thorn is a new way to share how you're really doing with friends!</p>
 
+			<table class="login-table">
+				<tbody>
+					<tr name="rose_tr">
+						<td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png">
+							<p class="feed-rbt-caption">Rose</p></td>
+							<td class="feed-table-right">Your highlight</td>
+					</tr>
+					<tr name="bud_tr">
+						<td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
+							<p class="feed-rbt-caption">Bud</p></td>
+							<td class="feed-table-right">Something you're looking forward to</td>
+					</tr>
+					<tr name="thorn_tr">
+						<td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
+							<p class="feed-rbt-caption">Thorn</p></td>
+							<td class="feed-table-right">Your lowlight</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</body>
 </html>

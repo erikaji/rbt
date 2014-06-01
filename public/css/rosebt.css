@@ -196,13 +196,43 @@ td a {
 	width: 100%;
 }
 
-#splash {
-	/* This image will be displayed fullscreen */
-	background:url('/images/SplashScreen.gif') no-repeat center center;
-	
-	/* Ensure the html element always takes up the full height of the browser window */
-	min-height:100%;
-	
-	/* The Magic */
-	background-size:cover;
+/* LOGIN */
+#login-all {
+	position: relative;
+	background-color: white;
+}
+
+#login-splash {
+	position: absolute;
+	/*top: 0px; not working for positioning
+	left: 0px;*/
+}
+
+#login-image {
+	max-height:100%;
+	max-width: 100%;
+}
+
+#login-content {
+	position: absolute;
+	display: none;
+}
+
+#login-welcome {
+	font-family: 'Lemon', cursive;
+	font-size: 20px;
+	text-align: center;
+}
+
+#login-intro {
+	text-align: center;
+	font-weight: bold;
+}
+
+.login-table {
+	border: none;
+	padding: 0px;
+	margin: 10px;
+	text-align: left;
+	width: 100%;
 }
