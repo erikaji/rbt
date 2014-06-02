@@ -5,8 +5,8 @@ body {
 
 .main {
 	background: #DDDDDD;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 100px;
+	padding-bottom: 20px;
 }
 
 .container {
@@ -182,7 +182,11 @@ input[type="radio"][value=""]{
 /* FOOTER */
 
 .navbar-fixed-bottom {
-	min-height:40px !important
+	min-height:40px !important;
+}
+
+.navbar-second {
+	margin-top: 50px;
 }
 
 .bottomnav1 {
