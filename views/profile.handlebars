@@ -13,147 +13,149 @@
   </head>
  
   <body>
-    <!--HEADER BEGIN-->
-    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-      <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
-      <div class="pull-right filter-button">
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <span data-bind="label">Filter</span>&nbsp;<span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li id="rose_filter"><a href="#Rose"> Rose </a></li>
-              <li id="bud_filter"><a href="#Bud"> Bud </a></li>
-              <li id="thorn_filter"><a href="#Thorn"> Thorn </a></li>
-              <li id="no_filter"><a href=""> All </a></li>
-            </ul>
-          </div>
-      </div>
-    </nav>
-    <!--HEADER END-->
-
-
-
-    <!--CONTENT BEGIN-->
-      <div class="container">
-
-        <!--USER PROFILE BEGIN-->
-        <div class="centerbox">
-          <img class="profile-userphoto" src={{rbt.[0].photo_user}}>
-          <div class="profile-username">
-            <p>{{rbt.[0].firstname}}<br />{{rbt.[0].lastname}}</p>
-          </div>
+    <div class="main">
+      <!--HEADER BEGIN-->
+      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
+        <div class="pull-right filter-button">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span data-bind="label">Filter</span>&nbsp;<span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li id="rose_filter"><a href="#Rose"> Rose </a></li>
+                <li id="bud_filter"><a href="#Bud"> Bud </a></li>
+                <li id="thorn_filter"><a href="#Thorn"> Thorn </a></li>
+                <li id="no_filter"><a href=""> All </a></li>
+              </ul>
+            </div>
         </div>
-        <center>
-          <a href="/edit" class="btn btn-default">Update Status</a>
-        </center>
-        <!--USER PROFILE END-->
-        
-
-
-        <!--RBT HISTORY BEGIN-->
-        {{#each rbt}}
-        <div class="well well-sm">
-          <div style="float:right;" name={{photo_tag}}_tr>
-            {{#if rosetag}}<img class="feed-rbt-icon-overlap" src="/images/Rose.png"/>{{/if}}
-            {{#if budtag}}<img class="feed-rbt-icon-overlap" src="/images/Bud.png">{{/if}}
-            {{#if thorntag}}<img class="feed-rbt-icon-overlap" src="/images/Thorn.png">{{/if}}
-          </div>
-          <!--USER AND TIMESTAMP BEGIN-->
-          <a href="/friend/{{id_user}}"}>
-            <img class="feed-userphoto" src={{photo_user}}>
-            <span class="feed-username">{{firstname}} {{lastname}}</span>
-          </a>
-          <div class="feed-datetime">
-            <abbr class="timeago" style="border:none" title={{created_at}}></abbr>
-          </div>
-          <!--USER AND TIMESTAMP END-->
+      </nav>
+      <!--HEADER END-->
 
 
 
-          <!--RBT BEGIN-->
-          <!--RBT PHOTO BEGIN-->
-          <div class="hidden" name="id_rbt">{{id_rbt}}</div>
-          <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
-          <div class="feed-rbt-photo" id={{id_rbt}}_spin name={{photo_tag}}_tr>
-            <img class="pano" id={{id_rbt}}_pano />
-          </div>
-          <!--RBT PHOTO END-->
-          
-          <!-- RBT TEXT BEGIN-->
-          <div class="container">
-            <table class="feed-table">
-              <tbody>
-                <tr name="rose_tr">
-                  <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
-                    <p class="feed-rbt-caption">Rose</p></td>
-                  <td class="feed-table-right">{{rose}}</td>
-                </tr>
-                <tr name="bud_tr">
-                  <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
-                    <p class="feed-rbt-caption">Bud</p></td>
-                  <td class="feed-table-right">{{bud}}</td>
-                </tr>
-                <tr name="thorn_tr">
-                  <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
-                    <p class="feed-rbt-caption">Thorn</p></td>
-                  <td class="feed-table-right">{{thorn}}</td>
-                </tr>
-              </tbody>
-            </table>
-            <!--RBT TEXT END-->
-          </div>
-          <!--RBT END-->
-      </div>
-      {{/each}}
-      <!--RBT HISTORY END-->
-
-
-
-    </div>
-    <!--CONTENT END-->
-
-
-
-    <!--FOOTER BEGIN-->
-    <div class="navbar navbar-inverse navbar-fixed-bottom">
-      <div class="navbar-inner">
+      <!--CONTENT BEGIN-->
         <div class="container">
-          <table class="bottomnav1">
-            <tr>
-              <td class="bottomnav2"><a class="bottomnav3" href="/"><img src="/images/Friends.png" class="friends-icon"></a></td>
-              <td class="bottomnav2 active"><a class="bottomnav3" href="/profile"><img src="/images/Me.png" class="me-icon"></a></td>
-            </tr>
-          </table>
+
+          <!--USER PROFILE BEGIN-->
+          <div class="centerbox">
+            <img class="profile-userphoto" src={{rbt.[0].photo_user}}>
+            <div class="profile-username">
+              <p>{{rbt.[0].firstname}}<br />{{rbt.[0].lastname}}</p>
+            </div>
+          </div>
+          <center>
+            <a href="/edit" class="btn btn-default">Update Status</a>
+          </center>
+          <!--USER PROFILE END-->
+          
+
+
+          <!--RBT HISTORY BEGIN-->
+          {{#each rbt}}
+          <div class="well well-sm">
+            <div style="float:right;" name={{photo_tag}}_tr>
+              {{#if rosetag}}<img class="feed-rbt-icon-overlap" src="/images/Rose.png"/>{{/if}}
+              {{#if budtag}}<img class="feed-rbt-icon-overlap" src="/images/Bud.png">{{/if}}
+              {{#if thorntag}}<img class="feed-rbt-icon-overlap" src="/images/Thorn.png">{{/if}}
+            </div>
+            <!--USER AND TIMESTAMP BEGIN-->
+            <a href="/friend/{{id_user}}"}>
+              <img class="feed-userphoto" src={{photo_user}}>
+              <span class="feed-username">{{firstname}} {{lastname}}</span>
+            </a>
+            <div class="feed-datetime">
+              <abbr class="timeago" style="border:none" title={{created_at}}></abbr>
+            </div>
+            <!--USER AND TIMESTAMP END-->
+
+
+
+            <!--RBT BEGIN-->
+            <!--RBT PHOTO BEGIN-->
+            <div class="hidden" name="id_rbt">{{id_rbt}}</div>
+            <div class="hidden" id={{id_rbt}}_hash>{{photo_rbt}}</div>
+            <div class="feed-rbt-photo" id={{id_rbt}}_spin name={{photo_tag}}_tr>
+              <img class="pano" id={{id_rbt}}_pano />
+            </div>
+            <!--RBT PHOTO END-->
+            
+            <!-- RBT TEXT BEGIN-->
+            <div class="container">
+              <table class="feed-table">
+                <tbody>
+                  <tr name="rose_tr">
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
+                      <p class="feed-rbt-caption">Rose</p></td>
+                    <td class="feed-table-right">{{rose}}</td>
+                  </tr>
+                  <tr name="bud_tr">
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
+                      <p class="feed-rbt-caption">Bud</p></td>
+                    <td class="feed-table-right">{{bud}}</td>
+                  </tr>
+                  <tr name="thorn_tr">
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
+                      <p class="feed-rbt-caption">Thorn</p></td>
+                    <td class="feed-table-right">{{thorn}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!--RBT TEXT END-->
+            </div>
+            <!--RBT END-->
+        </div>
+        {{/each}}
+        <!--RBT HISTORY END-->
+
+
+
+      </div>
+      <!--CONTENT END-->
+
+
+
+      <!--FOOTER BEGIN-->
+      <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="navbar-inner">
+          <div class="container">
+            <table class="bottomnav1">
+              <tr>
+                <td class="bottomnav2"><a class="bottomnav3" href="/"><img src="/images/Friends.png" class="friends-icon"></a></td>
+                <td class="bottomnav2 active"><a class="bottomnav3" href="/profile"><img src="/images/Me.png" class="me-icon"></a></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
+      <!--FOOTER END-->
+      <!--JAVASCRIPT BEGIN-->
+      <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+      <script src="/js/bootstrap.min.js"></script>
+      <script src="//cdn.firebase.com/v0/firebase.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+      <script type="text/javascript" src="/js/sha256.js"></script>
+      <script type="text/javascript" src="/js/fbRetrive.js"></script>
+      <script type="text/javascript" src="/js/filter.js"></script>
+      <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
+      <script type="text/javascript">
+         jQuery(document).ready(function() {
+           $("abbr.timeago").timeago();
+         });
+      </script>
+      <script type="text/javascript" src="/js/firepano.js"></script>
+      <script type="text/javascript">
+        $( document.body ).on('click', '.dropdown-menu li', function( event ) {
+          var $target = $( event.currentTarget );
+          $target.closest( '.btn-group' )
+            .find( '[data-bind="label"]' ).text( $target.text() )
+              .end()
+            .children( '.dropdown-toggle' ).dropdown( 'toggle' );
+          return false;
+        });
+      </script>
+      <!--JAVASCRIPT END-->
     </div>
-    <!--FOOTER END-->
-    <!--JAVASCRIPT BEGIN-->
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="//cdn.firebase.com/v0/firebase.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
-    <script type="text/javascript" src="/js/sha256.js"></script>
-    <script type="text/javascript" src="/js/fbRetrive.js"></script>
-    <script type="text/javascript" src="/js/filter.js"></script>
-    <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
-    <script type="text/javascript">
-       jQuery(document).ready(function() {
-         $("abbr.timeago").timeago();
-       });
-    </script>
-    <script type="text/javascript" src="/js/firepano.js"></script>
-    <script type="text/javascript">
-      $( document.body ).on('click', '.dropdown-menu li', function( event ) {
-        var $target = $( event.currentTarget );
-        $target.closest( '.btn-group' )
-          .find( '[data-bind="label"]' ).text( $target.text() )
-            .end()
-          .children( '.dropdown-toggle' ).dropdown( 'toggle' );
-        return false;
-      });
-    </script>
-    <!--JAVASCRIPT END-->
   </body>
 </html>
