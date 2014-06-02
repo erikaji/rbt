@@ -24,9 +24,9 @@ INSERT INTO rbt(id_user, created_at, photo_rbt, rose, bud, thorn) VALUES (2, NOW
 # ALTERING & ADDING COLUMNS
 ALTER TABLE user MODIFY photo VARCHAR(200);
 ALTER TABLE rbt MODIFY photo VARCHAR(200);
-ALTER TABLE rbt MODIFY rose VARCHAR(200);
-ALTER TABLE rbt MODIFY bud VARCHAR(200);
-ALTER TABLE rbt MODIFY thorn VARCHAR(200);
+ALTER TABLE rbt MODIFY rose VARCHAR(300);
+ALTER TABLE rbt MODIFY bud VARCHAR(300);
+ALTER TABLE rbt MODIFY thorn VARCHAR(300);
 ALTER TABLE rbt CHANGE COLUMN photo photo_rbt VARCHAR(200);
 ALTER TABLE user CHANGE COLUMN photo photo_user VARCHAR(200);
 ALTER TABLE user CHANGE COLUMN name firstname VARCHAR(200);
@@ -34,6 +34,7 @@ ALTER TABLE user ADD COLUMN lastname VARCHAR(200);
 ALTER TABLE user MODIFY lastname VARCHAR(45);
 ALTER TABLE rbt MODIFY id_rbt INT AUTO_INCREMENT;
 ALTER TABLE rbt ADD COLUMN photo_tag VARCHAR(10);
+ALTER TABLE user DROP COLUMN friends;
 
 # UPDATING VALUES
 UPDATE user SET photo='https://scontent-b.xx.fbcdn.net/hphotos-prn1/t1.0-9/1625699_10151879794022816_1076038618_n.jpg' WHERE id_user=1;
@@ -53,6 +54,10 @@ UPDATE user SET lastname='Hou' WHERE id_user=2;
 UPDATE user SET lastname='Ji' WHERE id_user=3;
 UPDATE rbt SET rose='newrose' WHERE id_rbt=3;
 UPDATE rbt SET photo_tag='thorn' WHERE id_rbt=1;
+UPDATE rbt SET id_user='2' WHERE id_rbt=121;
+UPDATE rbt SET id_user='2' WHERE id_rbt=131;
+
+UPDATE rbt SET id_user='1' WHERE id_rbt=121;
 
 # DELETING ROWS
 DELETE FROM rbt WHERE id_rbt=0;
