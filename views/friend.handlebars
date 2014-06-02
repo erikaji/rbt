@@ -19,7 +19,7 @@
       <div class="pull-right filter-button">
           <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            Filter <span class="caret"></span>
+            <span data-bind="label">Filter</span>&nbsp;<span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
               <li id="rose_filter"><a href="#Rose"> Rose </a></li>
@@ -141,6 +141,16 @@
        });
     </script>
     <script type="text/javascript" src="/js/firepano.js"></script>
+    <script type="text/javascript">
+      $( document.body ).on('click', '.dropdown-menu li', function( event ) {
+        var $target = $( event.currentTarget );
+        $target.closest( '.btn-group' )
+          .find( '[data-bind="label"]' ).text( $target.text() )
+            .end()
+          .children( '.dropdown-toggle' ).dropdown( 'toggle' );
+        return false;
+      });
+    </script>    
     <!--JAVASCRIPT END-->
   </body>
 </html>

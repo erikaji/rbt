@@ -18,8 +18,8 @@
       <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
       <div class="pull-right filter-button">
           <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            Filter <span class="caret"></span>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="filter-name">
+            <span data-bind="label">Filter</span>&nbsp;<span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
               <li id="rose_filter"><a href="#Rose"> Rose </a></li>
@@ -120,65 +120,6 @@
     <script type="text/javascript" src="/js/sha256.js"></script>
     <script type="text/javascript" src="/js/fbRetrive.js"></script>
     <script type="text/javascript" src="/js/filter.js"></script>
-
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-  <script src="/js/screenfull.js"></script>
-  <script>
-//   $(function() {
-
-//     $('#supported').text( 'Supported: ' + !!screenfull );
-
-//     if ( !screenfull ) {
-//       return false;
-//     }
-
-//     $('#request').click(function() {
-//       screenfull.request( $('#container')[0] );
-//       // Does not require jQuery, can be used like this too:
-//       // screenfull.request( document.getElementById('container') );
-//     });
-
-//     $('#exit').click(function() {
-//       screenfull.exit();
-//     });
-
-//     $('#toggle').click(function() {
-//       screenfull.toggle( $('#container')[0] );
-//     });
-
-//     $('#request2').click(function() {
-//       screenfull.request();
-//     });
-
-//     function callBack(rbt){
-//       return $('#'+rbt+'_pano').click(function() {
-//       screenfull.toggle( this );
-//     });
-// }
-
-//     rbts = document.getElementsByName("id_rbt");
-//     var funcs = [];
-//     for (var i = 0; i < rbts.length; i++) {  
-//       var rbt = rbts[i].innerHTML;
-//       funcs[i] = callBack(rbt); 
-//     }
-
-//     $('#demo-video').click(function() {
-//       screenfull.toggle( this );
-//     })
-
-//     screenfull.onchange = function( e ) {
-//       $('#status').text( 'Is fullscreen: ' + screenfull.isFullscreen );
-//       var elem = screenfull.element;
-//       if ( elem ) {
-//         $('#element').text( 'Element: ' + elem.localName + ( elem.id ? '#' + elem.id : '' ) );
-//       }
-//     };
-
-//     screenfull.onchange();
-
-//   });
-  </script>-->
     <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
     <script type="text/javascript">
        jQuery(document).ready(function() {
@@ -186,6 +127,17 @@
        });
     </script>
     <script type="text/javascript" src="/js/firepano.js"></script>
+    <!--Source for dropdown code below: http://www.benknowscode.com/2013/12/bootstrap-dropdown-button-select-box-control.html -->
+    <script type="text/javascript">
+      $( document.body ).on('click', '.dropdown-menu li', function( event ) {
+        var $target = $( event.currentTarget );
+        $target.closest( '.btn-group' )
+          .find( '[data-bind="label"]' ).text( $target.text() )
+            .end()
+          .children( '.dropdown-toggle' ).dropdown( 'toggle' );
+        return false;
+      });
+    </script>
     <!--JAVASCRIPT END-->
   </body>
 </html>

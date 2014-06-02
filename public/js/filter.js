@@ -72,6 +72,7 @@ function view_all() {
 	for (var i = 0; i < thorns.length; i++) {  
     	thorns[i].setAttribute("class", "visible");
 	}
+
 }
 
 var all_button = document.getElementById("no_filter");
