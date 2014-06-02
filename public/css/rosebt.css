@@ -5,8 +5,8 @@ body {
 
 .main {
 	background: #DDDDDD;
-	padding-top: 100px;
-	padding-bottom: 20px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .container {
@@ -194,7 +194,7 @@ input[type="radio"][value=""]{
 }
 
 .bottomnav2 {
-	padding: 9px;
+	padding: 1px;
 	text-align: center;
 	width: 50%;
 	background-color: rgb(0,103,56);
