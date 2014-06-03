@@ -283,6 +283,13 @@ td a {
 	text-align: center;
 }
 
+#login-rbt {
+	font-family: 'Lemon', cursive;
+	font-size: 25px;
+	text-align: center;
+	color: rgb(0,103,56);
+}
+
 #login-intro {
 	text-align: center;
 	font-weight: bold;
@@ -294,4 +301,12 @@ td a {
 	margin: 10px;
 	text-align: left;
 	width: 100%;
+}
+
+.login-button {
+	text-align: center;
+}
+
+.login-button:hover {
+	-webkit-filter: brightness(1.1);
 }

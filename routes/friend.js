@@ -1,4 +1,10 @@
 exports.view = function(req, res){
+
+	if(!req.isAuthenticated()){
+		res.redirect('/login');
+		return;
+	}
+
 	var pool = req.app.get('pool');
 	var id_user = req.params.id;
 	console.log(pool);

@@ -1,4 +1,10 @@
 exports.view = function(req, res){
+
+	if(!req.isAuthenticated()){
+		res.redirect('/login');
+		return;
+	}
+
 	var pool = req.app.get('pool');
 	pool.getConnection(function(err, connection) {
 		connection.query('SELECT photo_tag, id_rbt, rbt.id_user, '+
