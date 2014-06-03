@@ -15,7 +15,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
     <script type="text/javascript">
-        document.write( '<style>.navbar-fixed-bottom{visibility:hidden!important}@media(min-height:' + ($( window ).height() - 10) + 'px){.navbar-fixed-bottom{visibility:visible}}</style>' );
+        document.write( '<style>#footer{visibility:hidden}@media(min-height:' + ($( window ).height() - 10) + 'px){#footer{visibility:visible}}</style>' );
     </script>
   </head>
  
@@ -117,7 +117,7 @@
 
 
       <!--FOOTER BEGIN-->
-      <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="navbar navbar-inverse navbar-fixed-bottom" data-role="footer">
         <div class="navbar-inner">
           <div class="container">
             <table class="bottomnav1">
