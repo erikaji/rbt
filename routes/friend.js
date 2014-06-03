@@ -20,7 +20,7 @@ exports.view = function(req, res){
 	    	'LEFT JOIN sunshine ON id_rbt = id_rbt_sun '+
 	    	'WHERE rbt.id_user = '+ id_user +
 	    	' ORDER BY created_at DESC;', function(err, rows_rbt) {
-	    	res.render('friend', {
+	    	res.render('', {
 				rbt: rows_rbt
 			});
 	        connection.release();

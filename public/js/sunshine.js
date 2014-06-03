@@ -24,6 +24,7 @@ rbts = document.getElementsByName("id_rbt");
   
 
 sun_tr = document.getElementsByName("sun_tr");
+if (sun_tr){
   for (var j = 0; j < sun_tr.length; j++) {
   	var num = Math.floor((Math.random() * 4) + 0);
   	if (num) {
@@ -51,3 +52,4 @@ sun_tr = document.getElementsByName("sun_tr");
 
   	}
   }
+}
