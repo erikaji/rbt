@@ -114,7 +114,7 @@
                 </div>
                 {{else}}
                 <div class="sunshine-button">
-                  <form name="input" action="friend" method="post">
+                  <form name="input" action="{{id_user}}" method="post">
                   <textarea id={{id_rbt}}_form name="id_rbt_sun" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px; display: none;"></textarea>
                     <center>
                       <input class="btn btn-warning" type="submit" id={{id_rbt}}_sun_button value="Give sunshine to {{firstname}}" name="sunshine">
@@ -175,7 +175,8 @@
             .children( '.dropdown-toggle' ).dropdown( 'toggle' );
           return false;
         });
-      </script>    
+      </script>
+      <script type="text/javascript" src="/js/sunshine.js"></script>
       <!--JAVASCRIPT END-->
     </div>
   </body>

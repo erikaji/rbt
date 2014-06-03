@@ -117,9 +117,9 @@ app.get('/profile', profile.view);
 app.get('/friend/:id', friend.view);
 app.get('/edit', edit.view);
 app.get('/login', login.view);
-app.post('/profile', profile.post);
+app.post('/post', profile.post);
 app.post('/feed', feed.post);
-app.post('/friend', friend.post);
+app.post('/friend/:id', friend.post);
 
 
 // Redirect the user to Facebook for authentication.

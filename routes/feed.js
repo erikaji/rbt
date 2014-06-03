@@ -1,18 +1,12 @@
 exports.view = function(req, res){
-
-	console.log(req);
-	
 	if(!req.isAuthenticated()){
 		res.redirect('/login');
 		return;
 	}
 
-	//FB ID from request
-	var userFacebookId = req.user.id;
-	
+	var userFacebookId = req.user.id;	
 	var pool = req.app.get('pool');
-	//query by FB ID
-	console.log("fbid:" + userFacebookId);
+
 	pool.getConnection(function(err, connection) {
 	    connection.query('SELECT id_rbt, suntable.id_user, firstname, lastname, photo_user, facebook_id,'+
 			'created_at, photo_rbt, photo_tag, rose, bud, thorn, rosetag, budtag, thorntag, max(sunvalue) as sun '+
@@ -44,9 +38,9 @@ exports.post = function(req, res){
 				'IF(id_giver='+ userFacebookId +', 1, 0) as sunvalue FROM rbt '+
 				'INNER JOIN user ON rbt.id_user = user.id_user LEFT JOIN sunshine ON id_rbt = id_rbt_sun) AS suntable '+
 				'WHERE facebook_id != '+ userFacebookId +' GROUP BY id_rbt ORDER BY created_at DESC;', function(err, rows_rbt) {
-			    res.render('feed', {
+			    /*res.render('feed', {
 			    	rbt: rows_rbt
-			    });
+			    });*/
 	        	connection.release();
 			});
 		});
