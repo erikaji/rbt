@@ -10,6 +10,8 @@ DATE_FORMAT(created_at, "%Y-%m-%dT%TZ")
 as created_at, photo_rbt, IF(photo_tag="rose", 1, 0)
 as rosetag, IF(photo_tag="bud", 1, 0) as budtag,
 IF(photo_tag="thorn", 1, 0) as thorntag, photo_tag FROM (rbt, user) WHERE (rbt.id_user = user.id_user) ORDER BY created_at DESC;
+SELECT * FROM sunshine;
+SELECT id_rbt, IFNULL(id_rbt_sun,0) as suntag, IFNULL(id_giver,0) as givertag FROM rbt LEFT JOIN sunshine ON id_rbt=id_rbt_sun;
 
 # INSERTING NEW ROWS
 INSERT INTO user VALUES (1, 'Priya', 'Shekar', 'https://scontent-b.xx.fbcdn.net/hphotos-prn1/t1.0-9/1625699_10151879794022816_1076038618_n.jpg');

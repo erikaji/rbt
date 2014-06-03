@@ -15,128 +15,137 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
     <script type="text/javascript">
-        var win = $(window),
-            height = win.height(),
-            width = win.width();
-        document.write([
-            "<style>",
-            ".navbar-fixed-bottom { visibility: hidden !important; }",
-            "@media screen and (orientation: portrait) and (min-height: " + (Math.max(width, height) - 10) + "px)",
-            "{ .navbar-fixed-bottom { visibility: visible; } }",
-            "@media screen and (orientation: landscape) and (min-height: " + (Math.min(width, height) - 30) + "px)",
-            "{ .navbar-fixed-bottom { visibility: visible; } }",
-            "</style>"
-        ].join(" "));
+      if (Modernizr.touch) {
+          /* cache dom references */ 
+          var $body = jQuery('body'); 
+
+          /* bind events */
+          $(document)
+          .on('focus', 'input', function(e) {
+              $body.addClass('fixfixed');
+          })
+          .on('blur', 'input', function(e) {
+              $body.removeClass('fixfixed');
+          });
+      } 
     </script>
   </head>
  
   <body>
     <div class="main">
       <!--HEADER BEGIN-->
-      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-        <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
-      </nav>
+      <div class="header">
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+          <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
+        </nav>
+      </div>
       <!--HEADER END-->
 
 
 
       <!--CONTENT BEGIN-->
-        <div class="container">
-          <!--USER PROFILE BEGIN-->
-          <!--<div class="centerbox">
-            <img class="profile-userphoto" src={{rbt.[0].photo_user}}>
-            <div class="profile-username">
-              <p>{{rbt.[0].firstname}}<br />{{rbt.[0].lastname}}</p>
+      <div class="container">
+            <form action="">
+                <label>Testfield: <input type="text" /></label>
+            </form>
+
+        <!--USER PROFILE BEGIN-->
+        <!--<div class="centerbox">
+          <img class="profile-userphoto" src={{rbt.[0].photo_user}}>
+          <div class="profile-username">
+            <p>{{rbt.[0].firstname}}<br />{{rbt.[0].lastname}}</p>
+          </div>
+        </div>-->
+        <!--USER PROFILE END-->
+
+        <form name="input" action="profile" method="post" onsubmit="return validateForm()">
+          <div class="well well-sm">
+            <center><h4>Update Status</h4></center>
+            <div class="container">
+              <table class="feed-table" id="table1">
+                <tbody>
+
+                  <tr>
+                    <td class="feed-table-left">
+                      <p class="feed-rbt-caption">Photo Upload (Optional)</p></td>
+                    <td class="feed-table-right">
+                      <div id="spin"></div>
+                      <input type="file" accept="image/*" capture="camera" id="file-upload">
+                      <img class="pano" id="pano" />
+                      <textarea id="photo" name="photo" maxlength="199" class="form-control" style="display: none;"></textarea>
+                    </td>
+                  </tr>
+                  <tr id="photo-type">
+                    <td class="feed-table-left">
+                      <p class="feed-rbt-caption">What kind of photo are you sharing?</p></td>
+                    <td class="feed-table-right">
+                      <!--Nicer UI; can implement later
+                      <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">Rose</button></div>
+                      <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">Bud</button></div>
+                      <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">Thorn</button></div>
+                      <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">No Photo</button></div>-->
+                      <label class="checkbox-inline">
+                        <input name="photo_tag" type="radio" id="tag_rose" value="rose"><img class="form-rbt-icon" src="/images/Rose.png"/><p class="feed-rbt-caption">Rose</p>
+                      </label>
+                      <label class="radio-inline">
+                        <input name="photo_tag" type="radio" id="tag_bud" value="bud"><img class="form-rbt-icon" src="/images/Bud.png"/><p class="feed-rbt-caption">Bud</p>
+                      </label>
+                      <label class="radio-inline">
+                        <input name="photo_tag" type="radio" id="tag_thorn" value="thorn"><img class="form-rbt-icon" src="/images/Thorn.png"/><p class="feed-rbt-caption">Thorn</p>
+                      </label>
+                      <label class="radio-inline">
+                        <input name="photo_tag" type="radio" id="tag_none" value="" checked><!--No Photo-->
+                      </label>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
+                      <p class="feed-rbt-caption">Rose</p></td>
+                    <td class="feed-table-right">
+                      <textarea name="rose" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;" placeholder="What was your highlight this week?"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
+                      <p class="feed-rbt-caption">Bud</p></td>
+                    <td class="feed-table-right">
+                      <textarea name="bud" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;" placeholder="What are you looking forward to?"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
+                      <p class="feed-rbt-caption">Thorn</p></td>
+                    <td class="feed-table-right">
+                      <textarea name="thorn" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;" placeholder="What's the worst thing that happened to you this week?"></textarea>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <center>
+                <input type="submit" value="Submit">
+              </center>
             </div>
-          </div>-->
-          <!--USER PROFILE END-->
-
-          <form name="input" action="profile" method="post" onsubmit="return validateForm()">
-            <div class="well well-sm">
-              <center><h4>Update Status</h4></center>
-              <div class="container">
-                <table class="feed-table" id="table1">
-                  <tbody>
-
-                    <tr>
-                      <td class="feed-table-left">
-                        <p class="feed-rbt-caption">Photo Upload (Optional)</p></td>
-                      <td class="feed-table-right">
-                        <div id="spin"></div>
-                        <input type="file" accept="image/*" capture="camera" id="file-upload">
-                        <img class="pano" id="pano" />
-                        <textarea id="photo" name="photo" maxlength="199" class="form-control" style="display: none;"></textarea>
-                      </td>
-                    </tr>
-                    <tr id="photo-type">
-                      <td class="feed-table-left">
-                        <p class="feed-rbt-caption">What kind of photo are you sharing?</p></td>
-                      <td class="feed-table-right">
-                        <!--Nicer UI; can implement later
-                        <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">Rose</button></div>
-                        <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">Bud</button></div>
-                        <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">Thorn</button></div>
-                        <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">No Photo</button></div>-->
-                        <label class="checkbox-inline">
-                          <input name="photo_tag" type="radio" id="tag_rose" value="rose"><img class="form-rbt-icon" src="/images/Rose.png"/><p class="feed-rbt-caption">Rose</p>
-                        </label>
-                        <label class="radio-inline">
-                          <input name="photo_tag" type="radio" id="tag_bud" value="bud"><img class="form-rbt-icon" src="/images/Bud.png"/><p class="feed-rbt-caption">Bud</p>
-                        </label>
-                        <label class="radio-inline">
-                          <input name="photo_tag" type="radio" id="tag_thorn" value="thorn"><img class="form-rbt-icon" src="/images/Thorn.png"/><p class="feed-rbt-caption">Thorn</p>
-                        </label>
-                        <label class="radio-inline">
-                          <input name="photo_tag" type="radio" id="tag_none" value="" checked><!--No Photo-->
-                        </label>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Rose.png"/>
-                        <p class="feed-rbt-caption">Rose</p></td>
-                      <td class="feed-table-right">
-                        <textarea name="rose" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;" placeholder="What was your highlight this week?"></textarea>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Bud.png">
-                        <p class="feed-rbt-caption">Bud</p></td>
-                      <td class="feed-table-right">
-                        <textarea name="bud" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;" placeholder="What are you looking forward to?"></textarea>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
-                        <p class="feed-rbt-caption">Thorn</p></td>
-                      <td class="feed-table-right">
-                        <textarea name="thorn" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;" placeholder="What's the worst thing that happened to you this week?"></textarea>
-                      </td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
-                <center>
-                  <input type="submit" value="Submit">
-                </center>
-              </div>
-            </div>
-          </form>
+          </div>
+        </form>
 
       </div>
       <!--CONTENT END-->
 
 
       <!--FOOTER BEGIN-->
-      <div class="navbar navbar-inverse navbar-fixed-bottom" data-role="footer">
-        <div class="navbar-inner">
-          <div class="container">
-            <table class="bottomnav1">
-              <tr>
-                <td class="bottomnav2"><a class="bottomnav3" href="/"><img src="/images/Friends.png" class="friends-icon"></a></td>
-                <td class="bottomnav2 active"><a class="bottomnav3" href="/profile"><img src="/images/Me.png" class="me-icon"></a></td>
-              </tr>
-            </table>
+      <div class="footer">
+        <div class="navbar navbar-inverse navbar-fixed-bottom" data-role="footer">
+          <div class="navbar-inner">
+            <div class="container">
+              <table class="bottomnav1">
+                <tr>
+                  <td class="bottomnav2"><a class="bottomnav3" href="/"><img src="/images/Friends.png" class="friends-icon"></a></td>
+                  <td class="bottomnav2 active"><a class="bottomnav3" href="/profile"><img src="/images/Me.png" class="me-icon"></a></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>

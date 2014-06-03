@@ -18,6 +18,26 @@ a:active {
 	text-decoration: none;
 }
 
+.header { 
+    position: fixed; 
+    height: 50px; 
+    width: 100%; 
+    top: 0;
+    z-index: 1000;
+} 
+.footer { 
+    position: fixed;
+    height: 40px; 
+    width: 100%; 
+    bottom: 0; 
+    z-index: 1000; 
+    background: #facade; 
+} 
+.fixfixed .header, 
+.fixfixed .footer { 
+    position: absolute; 
+} 
+
 
 
 /* HEADER */
