@@ -15,7 +15,18 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
     <script type="text/javascript">
-        document.write( '<style>#footer{visibility:hidden}@media(min-height:' + ($( window ).height() - 10) + 'px){#footer{visibility:visible}}</style>' );
+        var win = $(window),
+            height = win.height(),
+            width = win.width();
+        document.write([
+            "<style>",
+            ".navbar-fixed-bottom { visibility: hidden !important; }",
+            "@media screen and (orientation: portrait) and (min-height: " + (Math.max(width, height) - 10) + "px)",
+            "{ .navbar-fixed-bottom { visibility: visible; } }",
+            "@media screen and (orientation: landscape) and (min-height: " + (Math.min(width, height) - 30) + "px)",
+            "{ .navbar-fixed-bottom { visibility: visible; } }",
+            "</style>"
+        ].join(" "));
     </script>
   </head>
  
@@ -32,12 +43,12 @@
       <!--CONTENT BEGIN-->
         <div class="container">
           <!--USER PROFILE BEGIN-->
-          <div class="centerbox">
+          <!--<div class="centerbox">
             <img class="profile-userphoto" src={{rbt.[0].photo_user}}>
             <div class="profile-username">
               <p>{{rbt.[0].firstname}}<br />{{rbt.[0].lastname}}</p>
             </div>
-          </div>
+          </div>-->
           <!--USER PROFILE END-->
 
           <form name="input" action="profile" method="post" onsubmit="return validateForm()">
