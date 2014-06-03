@@ -102,10 +102,10 @@
                 </div>
                 {{else}}
                 <div class="sunshine-button">
-                  <form name="input" onsubmit="return false;"> <!--action="feed" method="post"-->
+                  <form name="input" action="feed" method="post">
                   <textarea id={{id_rbt}}_form name="id_rbt_sun" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px; display: none;"></textarea>
                     <center>
-                      <input class="btn btn-warning" type="submit" id={{id_rbt}}_sun_button value="Give sunshine to {{firstname}}">
+                      <input class="btn btn-warning" type="submit" id={{id_rbt}}_sun_button value="Give sunshine to {{firstname}}" name="sunshine">
                     </center>
                   </form>
                 </div>
@@ -145,7 +145,6 @@
       <script type="text/javascript" src="/js/sha256.js"></script>
       <script type="text/javascript" src="/js/fbRetrive.js"></script>
       <script type="text/javascript" src="/js/filter.js"></script>
-      <script type="text/javascript" src="/js/sunshine.js"></script>
       <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
       <script type="text/javascript">
          jQuery(document).ready(function() {
@@ -163,6 +162,7 @@
           return false;
         });
       </script>
+      <script type="text/javascript" src="/js/sunshine.js"></script>
       <!--JAVASCRIPT END-->
     </div>
   </body>
