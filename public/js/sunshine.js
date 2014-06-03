@@ -2,9 +2,28 @@ function give_sun(rbt) {
 	return function() {
 		console.log(rbt);
 		document.getElementById(rbt+"_sun_button").setAttribute("class", "hidden");
-		var DOM_img = document.createElement("img");
-		DOM_img.src = "/images/Sunshine.png";
-		document.getElementById(rbt+"_sun").appendChild(DOM_img);
+		var div = document.createElement("div"); 
+		div.setAttribute("class", "sunshine-given");
+		document.getElementById(rbt+"_sun").appendChild(div);
+		var center = document.createElement("center"); 
+		var img_left = document.createElement("img");
+		img_left.setAttribute("class", "sun-icon flip-vertical");
+		img_left.src = '/images/Sunshine.png';
+		center.appendChild(img_left);
+		
+		var font = document.createElement("font"); 
+		font.setAttribute("color", "#999999");
+		font.setAttribute("style", "font-size: 11px;");
+		font.appendChild(document.createTextNode("You have given sunshine!"));
+		center.appendChild(font);
+
+		var img_left = document.createElement("img");
+		img_left.setAttribute("class", "sun-icon-right flip-horizontal");
+		img_left.src = '/images/Sunshine.png';
+		center.appendChild(img_left);
+
+
+
 	};
 
 }
