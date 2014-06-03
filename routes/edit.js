@@ -5,10 +5,13 @@ exports.view = function(req, res){
 		return;
 	}
 
+	//FB ID from request
+	var userFacebookId = req.user.id;
+
 	var pool = req.app.get('pool');
 	pool.getConnection(function(err, connection) {
 		connection.query('SELECT id_user, firstname, lastname, photo_user, facebook_id FROM user '+
-			'WHERE (id_user = 2)', function(err, rows_rbt) {
+			'WHERE (user.facebook_id = ' + userFacebookId + ')', function(err, rows_rbt) {
 	    	res.render('edit', {
 				rbt: rows_rbt
 			});
