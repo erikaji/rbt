@@ -20,7 +20,7 @@ exports.view = function(req, res){
 	    	'firstname, lastname, photo_user, facebook_id FROM rbt INNER JOIN user '+
 	    	'ON rbt.id_user = user.id_user '+
 	    	'LEFT JOIN sunshine ON id_rbt = id_rbt_sun '+
-	    	'WHERE rbt.id_user != '+ userFacebookId +
+	    	'WHERE rbt.id_user = user.id_user AND user.facebook_id !='+ userFacebookId +
 	    	' ORDER BY created_at DESC;', function(err, rows_rbt) {
 	    	res.render('feed', {
 				rbt: rows_rbt
@@ -43,7 +43,7 @@ exports.post = function(req, res){
 	    	'firstname, lastname, photo_user, facebook_id FROM rbt INNER JOIN user '+
 	    	'ON rbt.id_user = user.id_user '+
 	    	'LEFT JOIN sunshine ON id_rbt = id_rbt_sun '+
-	    	'WHERE rbt.id_user != '+ userFacebookId +
+	    	'WHERE rbt.id_user = user.id_user AND user.facebook_id !='+ userFacebookId +
 	    	' ORDER BY created_at DESC;', function(err, rows_rbt) {
 			    res.render('feed', {
 			    	rbt: rows_rbt
