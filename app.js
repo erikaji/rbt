@@ -118,6 +118,8 @@ app.get('/friend/:id', friend.view);
 app.get('/edit', edit.view);
 app.get('/login', login.view);
 app.post('/profile', profile.post);
+app.post('/feed', feed.post);
+
 
 // Redirect the user to Facebook for authentication.
 app.get('/auth/facebook', passport.authenticate('facebook'));

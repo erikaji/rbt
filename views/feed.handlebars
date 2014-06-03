@@ -89,6 +89,21 @@
                     <p class="feed-rbt-caption">Thorn</p></td>
                   <td class="feed-table-right">{{thorn}}</td>
                 </tr>
+                <tr id={{id_rbt}}_sun>
+                  <td>
+                    {{#if sun}}<img src="/images/Sunshine.png">
+                    {{else}}
+                    <form name="input" action="feed" method="post">
+                    <textarea id={{id_rbt}}_form name="id_rbt_sun" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;"></textarea>
+                      <center>
+                        <input type="submit" id={{id_rbt}}_sun_button value="Give sunshine!">
+                      </center>
+                    </form>
+
+                    {{/if}}
+                  
+                  </td>
+                </tr>
               </tbody>
             </table>
             <!--RBT TEXT END-->
@@ -125,13 +140,13 @@
       <script type="text/javascript" src="/js/sha256.js"></script>
       <script type="text/javascript" src="/js/fbRetrive.js"></script>
       <script type="text/javascript" src="/js/filter.js"></script>
+      <script type="text/javascript" src="/js/sunshine.js"></script>
       <script src='http://timeago.yarp.com/jquery.timeago.js'></script>
       <script type="text/javascript">
          jQuery(document).ready(function() {
            $("abbr.timeago").timeago();
          });
       </script>
-      <script type="text/javascript" src="/js/firepano.js"></script>
       <!--Source for dropdown code below: http://www.benknowscode.com/2013/12/bootstrap-dropdown-button-select-box-control.html -->
       <script type="text/javascript">
         $( document.body ).on('click', '.dropdown-menu li', function( event ) {
