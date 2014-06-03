@@ -24,9 +24,6 @@ function give_sun(rbt) {
 		img_right.setAttribute("class", "sun-icon-right flip-horizontal");
 		img_right.src = '/images/Sunshine.png';
 		center.appendChild(img_right);
-
-
-
 	};
 
 }
@@ -43,7 +40,6 @@ rbts = document.getElementsByName("id_rbt");
     }
  }
 }
-  
 
 sun_tr = document.getElementsByName("sun_tr");
 if (sun_tr){
@@ -67,9 +63,13 @@ if (sun_tr){
   		td_right.setAttribute("class", "feed-table-right");
 
 
-	  	td_right.appendChild(document.createTextNode("You have got "));
+	  	td_right.appendChild(document.createTextNode("You received "));
 	  	td_right.innerHTML += num;
-	  	td_right.innerHTML += " sunshines!";
+	  	td_right.innerHTML += " sunshine";
+	  	if (num != 1) {
+	  		td_right.innerHTML += "s";
+	  	}
+	  	td_right.innerHTML += "!";
 	  	td_right.style.color = "Orange";
 
   	}
