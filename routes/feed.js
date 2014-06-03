@@ -51,3 +51,23 @@ exports.post = function(req, res){
 		});
 	});
 }
+
+function sunshineSubmit(event) {
+	console.log("sunshine submitted");
+	$(this).animate({
+		background-color: orange;
+	}, 100);
+	$(this).fadeOut();
+	document.getElementByID('{{id_rbt}}_sun').html = '
+	                <div class="sunshine-given">
+                  <center>
+                    <img class="sun-icon flip-vertical" src="/images/Sunshine.png">
+                    <font color="#999999" style="font-size: 11px;">You gave sunshine to {{firstname}}!</font>
+                    <img class="sun-icon-right flip-horizontal" src="/images/Sunshine.png">
+                  </center>
+                </div>';
+	return false;
+}
+
+var sun_button = document.getElementsByClassName(".btn-warning"); // one for each RBT...!
+sun_button.addEventListener("click", sunshineSubmit, false);
