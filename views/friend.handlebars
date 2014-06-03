@@ -25,7 +25,7 @@
         <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
         <div class="pull-right filter-button">
             <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="filter-name">
               <span data-bind="label">Filter</span>&nbsp;<span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu">
@@ -101,24 +101,28 @@
                       <p class="feed-rbt-caption">Thorn</p></td>
                     <td class="feed-table-right">{{thorn}}</td>
                   </tr>
-
-                  <tr id={{id_rbt}}_sun>
-                  <td>
-                    {{#if sun}}<img src="/images/Sunshine.png">
-                    {{else}}
-                    <form name="input" action="feed" method="post">
-                    <textarea id={{id_rbt}}_form name="id_rbt_sun" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px;"></textarea>
-                      <center>
-                        <input type="submit" id={{id_rbt}}_sun_button value="Give sunshine!" class="btn btn-warning">
-                      </center>
-                    </form>
-
-                    {{/if}}
-                  
-                  </td>
-                </tr>
                 </tbody>
               </table>
+              <div id={{id_rbt}}_sun>
+                {{#if sun}}
+                <div class="sunshine-given">
+                  <center>
+                    <img class="sun-icon flip-vertical" src="/images/Sunshine.png">
+                    <font color="#999999" style="font-size: 11px;">You gave sunshine to {{firstname}}!</font>
+                    <img class="sun-icon-right flip-horizontal" src="/images/Sunshine.png">
+                  </center>
+                </div>
+                {{else}}
+                <div class="sunshine-button">
+                  <form name="input" action="friend" method="post">
+                  <textarea id={{id_rbt}}_form name="id_rbt_sun" maxlength="199" class="form-control" style="margin: 0px; height: 80px; width: 215px; display: none;"></textarea>
+                    <center>
+                      <input class="btn btn-warning" type="submit" id={{id_rbt}}_sun_button value="Give sunshine to {{firstname}}" name="sunshine">
+                    </center>
+                  </form>
+                </div>
+                {{/if}}
+              </div>
               <!--RBT TEXT END-->
             </div>
             <!--RBT END-->
