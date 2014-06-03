@@ -132,6 +132,39 @@ a:active {
 	width: 30px;
 }
 
+.sun-icon {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	text-align: left;
+}
+
+.sun-icon-right {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	text-align: right;
+}
+
+.flip-vertical {
+	-moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    -ms-filter: flipv; /*IE*/
+    filter: flipv; /*IE*/
+}
+
+.flip-horizontal {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+
 .form-rbt-icon {
 	height: 30px;
 	width: 30px;

@@ -14,19 +14,6 @@
     <link rel="apple-touch-startup-image" href="/startup.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
-    <script type="text/javascript">
-      jQuery(function(){
-          var $body = jQuery('body');
-          var $inputs = jQuery('input');
-
-          $inputs.on('focus', function(e) {
-              $body.addClass('fixfixed');
-          });
-          $inputs.on('blur', function(e) {
-              $body.removeClass('fixfixed');
-          });
-      });
-    </script>
   </head>
  
   <body>
@@ -34,8 +21,6 @@
 
       <a href="/logout">Logout</a>
       <!--HEADER BEGIN-->
-      <div class="header">Heade
-              </div>
         <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
           <a class="navbar-brand" style="color:white;">Rose Bud Thorn</a>
         </nav>
@@ -44,10 +29,6 @@
 
       <!--CONTENT BEGIN-->
       <div class="container">
-            <form action="">
-                <label>Testfield: <input type="text" /></label>
-            </form>
-
         <!--USER PROFILE BEGIN-->
         <!--<div class="centerbox">
           <img class="profile-userphoto" src={{rbt.[0].photo_user}}>
@@ -146,9 +127,6 @@
             </div>
           </div>
         </div>
-
-      <div class="footer">Footer
-      </div>
       <!--FOOTER END-->
       <!--JAVASCRIPT BEGIN-->
       <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
