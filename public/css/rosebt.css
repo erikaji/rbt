@@ -1,6 +1,7 @@
 /* GENERAL */
 
 body {
+    padding: 120px 0 50px 0; 
 }
 
 .main {
@@ -19,22 +20,24 @@ a:active {
 }
 
 .header { 
-    position: fixed !important;
-    height: 50px; 
+    position: fixed;
+    height: 100px; 
     width: 100%; 
     top: 0;
     z-index: 1000;
+    background: #bada55;
 } 
 .footer { 
-    position: fixed !important;
-    height: 40px; 
+    position: fixed;
+    height: 30px;
     width: 100%; 
     bottom: 0 !important;
     z-index: 1000;
+    background: #facade;
 } 
 .fixfixed .header, 
 .fixfixed .footer { 
-    position: absolute !important; 
+    position: absolute; 
 } 
 
 
