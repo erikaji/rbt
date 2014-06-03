@@ -19,23 +19,22 @@ a:active {
 }
 
 .header { 
-    position: fixed; 
+    position: fixed !important;
     height: 50px; 
     width: 100%; 
     top: 0;
     z-index: 1000;
 } 
 .footer { 
-    position: fixed;
+    position: fixed !important;
     height: 40px; 
     width: 100%; 
-    bottom: 0; 
-    z-index: 1000; 
-    background: #facade; 
+    bottom: 0 !important;
+    z-index: 1000;
 } 
 .fixfixed .header, 
 .fixfixed .footer { 
-    position: absolute; 
+    position: absolute !important; 
 } 
 
 

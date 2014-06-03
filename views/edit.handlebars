@@ -15,19 +15,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
     <script type="text/javascript">
-      if (Modernizr.touch) {
-          /* cache dom references */ 
-          var $body = jQuery('body'); 
+      jQuery(function(){
+          var $body = jQuery('body');
+          var $inputs = jQuery('input');
 
-          /* bind events */
-          $(document)
-          .on('focus', 'input', function(e) {
+          $inputs.on('focus', function(e) {
               $body.addClass('fixfixed');
-          })
-          .on('blur', 'input', function(e) {
+          });
+          $inputs.on('blur', function(e) {
               $body.removeClass('fixfixed');
           });
-      } 
+      });
     </script>
   </head>
  
