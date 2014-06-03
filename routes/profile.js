@@ -30,7 +30,6 @@ exports.post = function(req, res){
 	//FB ID from request
 	var userFacebookId = req.user.id;
 
-
 	//NOTE: POST IS NOT WORKING, NEEDS TO STORE BY FACEBOOK_ID
 	var pool = req.app.get('pool');
 	pool.getConnection(function(err, connection) {

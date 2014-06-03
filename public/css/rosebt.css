@@ -225,7 +225,7 @@ input[type="radio"][value=""]{
 }
 
 .bottomnav2:hover {
-	-webkit-filter: brightness(1.1);
+	-webkit-filter: brightness(0.9);
 }
 
 .me-icon {
@@ -308,5 +308,5 @@ td a {
 }
 
 .login-button:hover {
-	-webkit-filter: brightness(1.1);
+	-webkit-filter: brightness(0.95);
 }

@@ -19,14 +19,15 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new FacebookStrategy({
   clientID: '1432100480389043',
   clientSecret: '72a751f898169178438ef3a698a8aee3',
-     //callbackURL: "http://www.rosebt.herokuapp.com/auth/facebook/callback" //***CURRENTLY LOCALHOST FOR TESTING***
+     //callbackURL: "http://www.rosebt.herokuapp.com/auth/facebook/callback" //***CURRENTLY LOCALHOST, UPDATE HERE AND IN FB DEV ACCOUNT***
      callbackURL: "http://localhost:5000/auth/facebook/callback"
    },
    function(accessToken, refreshToken, profile, done) {
    //   User.findOrCreate(..., function(err, user) {
    //     if (err) { return done(err); }
        // done(null, user);
-       done(null, profile); //***ALLOWS CURRENTLY REGISTERED USERS TO LOG IN, BUT DOES NOT CREATE NEW USERS, see http://passportjs.org/guide/facebook/
+       
+       done(null, profile); //see http://passportjs.org/guide/facebook/
    //   });
 }
 ));

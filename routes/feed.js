@@ -1,5 +1,7 @@
 exports.view = function(req, res){
 
+	console.log(req);
+	
 	if(!req.isAuthenticated()){
 		res.redirect('/login');
 		return;
