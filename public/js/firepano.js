@@ -34,7 +34,9 @@ $(function() {
   if (hash === '') {
     // No hash found, so render the file upload button.
     $('#file-upload').show();
+    if ( document.getElementById("file-upload")) {
     document.getElementById("file-upload").addEventListener('change', handleFileSelect, false);
+  }
 
   } else {
     // A hash was passed in, so let's retrieve and render it.
