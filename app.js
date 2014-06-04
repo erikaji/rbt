@@ -20,8 +20,8 @@ passport.use(new FacebookStrategy({
   clientID: '1432100480389043',
   clientSecret: '72a751f898169178438ef3a698a8aee3',
      //callbackURL: "http://www.rosebt.herokuapp.com/auth/facebook/callback" //***CURRENTLY LOCALHOST, UPDATE HERE AND IN FB DEV ACCOUNT***
-     //callbackURL: "http://rosebt.herokuapp.com/auth/facebook/callback"
-    callbackURL: "http://localhost:3000/auth/facebook/callback"
+     callbackURL: "http://rosebt.herokuapp.com/auth/facebook/callback"
+    //callbackURL: "http://localhost:3000/auth/facebook/callback"
 
    },
    function(accessToken, refreshToken, profile, done) {
