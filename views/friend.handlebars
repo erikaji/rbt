@@ -107,7 +107,7 @@
                 <!--FAKE SUNSHINE-->
                 <div id="fake-sunshine-{{id_rbt}}" class="hidden">
                   <center><img class="sun-icon flip-vertical" src="/images/Sunshine.png">
-                  <font color="#999999" style="font-size: 11px;">You gave sunshine!</font>
+                  <font color="#999999" style="font-size: 11px;">You gave sunshine to {{firstname}}!</font>
                   <img class="sun-icon-right flip-horizontal" src="/images/Sunshine.png"></center>
                 </div>
                 <!--END FAKE SUNSHINE-->
@@ -115,11 +115,11 @@
                 <!--REAL SUNSHINE-->
                 <div id="sunshine-given">
                   {{#if sun}}
-                    <center>
-                      <img class="sun-icon flip-vertical" src="/images/Sunshine.png">
-                      <font color="#999999" style="font-size: 11px;">You gave sunshine to {{firstname}}!</font>
-                      <img class="sun-icon-right flip-horizontal" src="/images/Sunshine.png">
-                    </center>
+                  <center>
+                    <img class="sun-icon flip-vertical" src="/images/Sunshine.png">
+                    <font color="#999999" style="font-size: 11px;">You gave sunshine to {{firstname}}!</font>
+                    <img class="sun-icon-right flip-horizontal" src="/images/Sunshine.png">
+                  </center>
                   {{/if}}
                 </div>
                 <div class="sunshine-button">
