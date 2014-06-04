@@ -8,15 +8,9 @@ exports.view = function(req, res){
 	var pool = req.app.get('pool');
 
 	pool.getConnection(function(err, connection) {
-		connection.query('SELECT id_rbt, suntable.id_user, firstname, lastname, photo_user, facebook_id,'+
-			'created_at, photo_rbt, photo_tag, rose, bud, thorn, rosetag, budtag, thorntag, max(sunvalue) as sun '+
-			' FROM (SELECT id_rbt, rbt.id_user, firstname, lastname, photo_user, facebook_id,'+
-	    	'DATE_FORMAT(created_at, "%Y-%m-%dT%TZ") as created_at, photo_rbt, photo_tag, rose, bud, thorn, '+
-			'IF(photo_tag="rose", 1, 0) as rosetag, IF(photo_tag="bud", 1, 0) as budtag,'+
-			'IF(photo_tag="thorn", 1, 0) as thorntag, IF(id_giver='+ userFacebookId +', 1, 0) as sunvalue '+
-	    	'FROM rbt INNER JOIN user ON rbt.id_user = user.id_user '+
-	    	'LEFT JOIN sunshine ON id_rbt = id_rbt_sun) AS suntable '+
-	    	'WHERE suntable.id_user = '+ id_user + ' GROUP BY id_rbt ORDER BY created_at DESC;', function(err, rows_rbt) {
+		connection.query('SELECT id_rbt, rbt.id_user, firstname, lastname, photo_user, facebook_id,'+
+			'DATE_FORMAT(created_at, "%Y-%m-%dT%TZ") as created_at, photo_rbt, photo_tag, rose, bud, thorn, IF(photo_tag="rose", 1, 0) as rosetag, IF(photo_tag="bud", 1, 0) as budtag, IF(photo_tag="thorn", 1, 0) as thorntag, sun'
+			+' FROM rbt inner join (select id_rbt_sun, count(id_rbt_sun) as sun from sunshine group by id_rbt_sun) as sun_count on id_rbt_sun = id_rbt inner join user on rbt.id_user = user.id_user where facebook_id = '+ userFacebookId +' ORDER BY created_at DESC;', function(err, rows_rbt) {
 	    	res.render('friend', {
 				rbt: rows_rbt
 			});
@@ -24,6 +18,9 @@ exports.view = function(req, res){
 	    });
 	});
 };
+
+
+
 
 
 
