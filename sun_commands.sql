@@ -1,7 +1,14 @@
 SELECT * FROM user;
 SELECT * FROM sunshine;
-SELECT * FROM rbt;
-DELETE FROM sunshine WHERE id=141;
+SELECT * FROM rbt WHERE id_user =1;
+DELETE FROM sunshine WHERE id = 501;
+
+INSERT INTO rbt(id_user, created_at, photo_rbt, photo_tag, rose, bud, thorn)
+VALUES (3, 'timhere', 'urlhere', 'rose', 'rose', 'bud', 'thorn');
+
+SELECT * FROM user WHERE facebook;
+
+
 
 SELECT id_rbt,
 rbt.id_user, firstname, lastname, photo_user, facebook_id,
@@ -32,4 +39,5 @@ DATE_FORMAT(created_at, "%Y-%m-%dT%TZ") as created_at, photo_rbt, photo_tag, ros
 IF(photo_tag="rose", 1, 0) as rosetag, IF(photo_tag="bud", 1, 0) as budtag, IF(photo_tag="thorn", 1, 0) as thorntag,
 IF(id_giver='+ userFacebookId +', 1, 0) as sunvalue FROM rbt
 INNER JOIN user ON rbt.id_user = user.id_user LEFT JOIN sunshine ON id_rbt = id_rbt_sun) AS suntable
-WHERE facebook_id != '10202343577684690' GROUP BY id_rbt ORDER BY created_at DESC;
+WHERE facebook_id != '10202343577684690' GROUP BY id_rbt ORDER BY created_at DESC;DELETE FROM sunshine WHERE id_rbt_sun < 500
+DELETE FROM sunshine WHERE id_rbt_sun < 500
