@@ -1,7 +1,7 @@
 # VIEWING TABLES
 SELECT * FROM rbt; # this allows you to view the entire table
 SELECT * FROM user;
-SELECT * FROM user WHERE (id_user=2); # specify which rows/cols to view
+SELECT * FROM rbt WHERE (id_user=2); # specify which rows/cols to view
 SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user);
 SELECT * FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user = 2) ORDER BY created_at DESC;
 SELECT id_rbt, rbt.id_user, DATE_FORMAT(created_at, "%Y-%m-%dT%TZ") as created_at, photo_rbt, rose, bud, thorn, user.id_user, name, photo_user, facebook_id FROM (rbt, user) WHERE (rbt.id_user = user.id_user AND rbt.id_user != 2) ORDER BY created_at DESC;
@@ -11,6 +11,7 @@ as created_at, photo_rbt, IF(photo_tag="rose", 1, 0)
 as rosetag, IF(photo_tag="bud", 1, 0) as budtag,
 IF(photo_tag="thorn", 1, 0) as thorntag, photo_tag FROM (rbt, user) WHERE (rbt.id_user = user.id_user) ORDER BY created_at DESC;
 SELECT * FROM sunshine;
+DELETE FROM sunshine WHERE id = 91;
 SELECT id_rbt, IFNULL(id_rbt_sun,0) as suntag, IFNULL(id_giver,0) as givertag FROM rbt LEFT JOIN sunshine ON id_rbt=id_rbt_sun;
 
 # INSERTING NEW ROWS

@@ -25,24 +25,26 @@ UPDATE rbt SET bud='I\'m meeting with my Viennese Ball "successors" one last tim
 UPDATE rbt SET thorn='Coding sometimes takes a LOT longer than I think it will. Ugh.' WHERE id_rbt=321;
 UPDATE rbt SET photo_tag='rose' WHERE id_rbt=321;
 
-UPDATE rbt SET created_at='2014-05-12 18:33:48' WHERE id_rbt=341;
+UPDATE rbt SET created_at='2014-05-31 18:33:48' WHERE id_rbt=331;
 UPDATE rbt SET rose='You won\'t BELIEVE where I got this picture! Hint: it\'s a well-known campus landmark, and it\'s very high up ;)' WHERE id_rbt=341;
 UPDATE rbt SET bud='I ordered some squishables and they\'re coming soon!!!' WHERE id_rbt=341;
 UPDATE rbt SET thorn='I have to get up early in the morning tomorrow, and I feel like I haven\'t slept in ages...' WHERE id_rbt=341;
-UPDATE rbt SET photo_tag='rose' WHERE id_rbt=341;
+UPDATE rbt SET photo_tag='bud' WHERE id_rbt=431;
 
 UPDATE rbt SET created_at='2014-05-18 18:33:48' WHERE id_rbt=311;
 UPDATE rbt SET rose='Maker Faire was really cool! My favorite thing was this glowing cat.' WHERE id_rbt=311;
 UPDATE rbt SET bud='Attending a friend\'s composition concert' WHERE id_rbt=311;
 UPDATE rbt SET thorn='It\'s been tricky finding users for our user testing this week for 247' WHERE id_rbt=311;
 
-UPDATE rbt SET rose='Hiking on Memorial Day!' WHERE id_rbt=331;
-UPDATE rbt SET bud='Looking forward to a full night of sleep =]' WHERE id_rbt=331;
-UPDATE rbt SET thorn='Almost fell asleep while driving back from the beach. Thank goodness my friend played some upbeat music to keep me awake' WHERE id_rbt=331;
+UPDATE rbt SET created_at='2014-05-01 18:33:48' WHERE id_rbt=631;
+UPDATE rbt SET rose='I got to hang out with my neighbor and her cat this weekend!' WHERE id_rbt=431;
+UPDATE rbt SET bud='I get to hang out with my little and her roommate today :)' WHERE id_rbt=431;
+UPDATE rbt SET thorn='Sometimes I just wish my friends would get along :(' WHERE id_rbt=631;
+
+UPDATE rbt SET created_at='2014-05-20 18:33:48' WHERE id_rbt=531;
+UPDATE rbt SET id_user=1 WHERE id_rbt=451;
+
+DELETE FROM rbt WHERE id_rbt = 511;
 
 
-DELETE FROM rbt WHERE id_rbt=181;
-
-UPDATE rbt SET id_user=1 WHERE id_rbt=61;
-UPDATE rbt SET created_at='2013-05-01 18:33:48' WHERE id_rbt=131;
 
