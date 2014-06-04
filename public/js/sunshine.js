@@ -2,11 +2,7 @@ function give_sun(rbt) {
 	return function() {
 		console.log(rbt);
 		document.getElementById(rbt+"_sun_button").setAttribute("class", "hidden");
-		//var containingProject = document.getElementById("sunshine-given-"+rbt);
-		//console.log(containingProject);
 		document.getElementById("fake-sunshine-"+rbt).setAttribute("class", "visible");
-		//var containingProject = $(this).closest(".sunshine-master");
-		//containingProject.append('');
 	};
 
 }

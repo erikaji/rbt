@@ -91,9 +91,7 @@
               </tbody>
             </table>
               <div id={{id_rbt}}_sun>
-                <div class="sunshine-master">
-
-                  <!--FAKE SUNSHINE-->
+                <!--FAKE SUNSHINE-->
                 <div id="fake-sunshine-{{id_rbt}}" class="hidden">
                   <center><img class="sun-icon flip-vertical" src="/images/Sunshine.png">
                   <font color="#999999" style="font-size: 11px;">You gave sunshine!</font>
@@ -101,6 +99,7 @@
                 </div>
                 <!--END FAKE SUNSHINE-->
 
+                <!--REAL SUNSHINE-->
                 <div id="sunshine-given">
                   {{#if sun}}
                     <center>
@@ -120,7 +119,7 @@
                     </form>
                   {{/unless}}
                 </div>
-              </div>
+                <!--END REAL SUNSHINE-->
               </div>
             <!--RBT TEXT END-->
           </div>
