@@ -50,7 +50,7 @@ if (sun_tr){
   		sun_tr[j].appendChild(td_left);
   		td_left.setAttribute("class", "feed-table-left");
   		var img = new Image(); 
-		img.src = '/images/Sunshine.png';
+		img.src = "/images/Sunshine.png";
 		img.setAttribute("class", "feed-rbt-icon");
 		td_left.appendChild(img);
 		var caption = document.createElement("p"); 
