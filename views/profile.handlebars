@@ -105,13 +105,21 @@
                     <td class="feed-table-left"><img class="feed-rbt-icon" src="/images/Thorn.png">
                       <p class="feed-rbt-caption">Thorn</p></td>
                     <td class="feed-table-right">{{thorn}}</td>
-                  </tr>
-                  <tr name="sun_tr">
-
-                  </tr>
+                  </tr>             
                 </tbody>
               </table>
               <!--RBT TEXT END-->
+
+              <div id="sunshine-given">
+
+                  {{#if sun}}
+                  <center>
+                    <img class="sun-icon flip-vertical" src="/images/Sunshine.png">
+                    <font color="#999999" style="font-size: 11px;">You got {{sun}} sunshine!</font>
+                    <img class="sun-icon-right flip-horizontal" src="/images/Sunshine.png">
+                  </center>
+                {{/if}}
+                </div>
             </div>
             <!--RBT END-->
         </div>
