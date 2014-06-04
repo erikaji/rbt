@@ -313,9 +313,9 @@ td a {
 }
 
 #login-welcome {
-	font-family: 'Lemon', cursive;
 	font-size: 20px;
 	text-align: center;
+	font-weight: bold;
 }
 
 #login-rbt {
@@ -333,7 +333,7 @@ td a {
 .login-table {
 	border: none;
 	padding: 0px;
-	margin: 10px;
+	margin: 5px;
 	text-align: left;
 	width: 100%;
 }
